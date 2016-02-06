@@ -1,6 +1,6 @@
 html { 
 	background-color: #990000; 
-	margin: 20px;
+	margin: 10px;
 	margin-right: 400px;
 	margin-left: 400px;
 }
@@ -26,7 +26,7 @@ body{
   color: #006a52;
   text-align: center;
   font-size: 2em;
-  font-weight: normal;
+  font-weight: lighter;
   letter-spacing: 2px;
   text-transform: uppercase;
 }
@@ -59,7 +59,7 @@ p {
     font-size: .5em;
     letter-spacing: .15em;
     text-transform: uppercase;
-    text-align: center;
+    text-align: center;        	
 }
 
 
