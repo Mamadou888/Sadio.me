@@ -1,27 +1,40 @@
+html { 
+	background-color: #990000; 
+}
+
 body{
-	font-family: "freight-text-pro",Georgia,serif;
+	font-family: georgia;
 	font-size: 12pt;
 	text-align: center;
 	line-height: 1.8em;
 	color: #2d2d2d;
-	margin:0;
-	margin:0 0 140px 0;
 	display: inline-block;
+	margin: 40px;
+	margin-right: 400px;
+	margin-left: 400px;
+	background-color: white; 
 }
 
+
 .container {
-	margin: 20px;
-	margin-right: 350px;
-	margin-left: 350px;
-	padding-top: 10px;
-	padding-right: 100px;
-	padding-left: 100px;
+	padding-top: 6px;
+	padding-right: 85px;
+	padding-left: 85px;
+}
+
+.title {
+  font-family: "Lato", sans-serif;
+  font-size: 2em;
+  font-weight: normal;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 img {
 	max-width:40%;
 }
 
-title {
-
+a {
+    color: #990000;
+    text-decoration: none;
 }
