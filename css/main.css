@@ -1,29 +1,30 @@
 html { 
 	background-color: #990000; 
+	margin: 20px;
+	margin-right: 400px;
+	margin-left: 400px;
 }
 
 body{
 	font-family: georgia;
-	font-size: 12pt;
-	text-align: center;
+	font-size: 11pt;
 	line-height: 1.8em;
 	color: #2d2d2d;
 	display: inline-block;
-	margin: 40px;
-	margin-right: 400px;
-	margin-left: 400px;
 	background-color: white; 
 }
 
 
 .container {
 	padding-top: 6px;
-	padding-right: 85px;
+	padding-right: 85px;	
 	padding-left: 85px;
 }
 
 .title {
   font-family: "Lato", sans-serif;
+  color: #006a52;
+  text-align: center;
   font-size: 2em;
   font-weight: normal;
   letter-spacing: 2px;
@@ -31,10 +32,56 @@ body{
 }
 
 img {
-	max-width:40%;
+	max-width: 60%;
+    display: block;
+    margin: 0 auto;
+
 }
 
 a {
-    color: #990000;
+    color: #006a52;
     text-decoration: none;
 }
+
+p {
+	display: block;
+}
+
+.link-out {
+    font-family: sans-serif;
+    font-size: .75em;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+}
+
+.copyright {
+	font-family: sans-serif;
+    font-size: .5em;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+
+@media only screen and (max-width: 1000px) {
+
+	html { 
+		background-color: #990000; 
+		margin: 10px;
+	}
+
+	.container {
+		padding-top: 6px;
+		padding-right: 20px;	
+		padding-left: 20px;
+	}
+}
+
+
+
+
+
+
+
+
+
