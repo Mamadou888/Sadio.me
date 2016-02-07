@@ -1,19 +1,6 @@
-Welcome to my life.
+Welcome to my corner of the web. Feedback is strongly encouraged.
 
+The contact form works through formspree.io (it's awesome).
 
-Feedback is strongly encouraged :)
+This website was inspired by Jonathan Leung's: jonl.org
 
-
-Contact form works through formspree.io(it's awesome).
-
-
-
-
-Credits:
-
-	Demo Images:
-		Unsplash (unsplash.com)
-
-	Highlights by HTML5 UP
-		AJ:
-			n33.co @n33co dribbble.com/n33
