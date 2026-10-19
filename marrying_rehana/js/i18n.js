@@ -17,7 +17,7 @@ export const STRINGS = {
     euroNote: '',
     thanks: 'Thank you so much! 🤍 Check your inbox for a little note from us.',
     photoCredits: 'Photo credits',
-    madeWith: 'Made with love by Mamadou (Engineer) and Rehana (Designer) <3',
+    madeWith: 'Made with love by Rehana (Designer) and Mamadou (Engineer) ❤️',
     loadError: "We couldn't load the gifts. Please refresh the page.",
   },
   fr: {
@@ -38,7 +38,7 @@ export const STRINGS = {
     euroNote: 'Les prix en euros sont approximatifs. Le paiement est effectué en dollars américains.',
     thanks: 'Merci infiniment ! 🤍 Un petit mot de notre part vous attend dans votre boîte mail.',
     photoCredits: 'Crédits photo',
-    madeWith: 'Fait avec amour par Mamadou (ingénieur) et Rehana (designer) <3',
+    madeWith: 'Fait avec amour par Rehana (designer) et Mamadou (ingénieur) ❤️',
     loadError: "Impossible de charger les cadeaux. Veuillez actualiser la page.",
   },
 };

@@ -50,6 +50,6 @@ test('third blurb paragraph opens with the "future moment" sentence', () => {
 });
 
 test('made-with-love line credits both of us in each language', () => {
-  assert.equal(t('en', 'madeWith'), 'Made with love by Mamadou (Engineer) and Rehana (Designer) <3');
-  assert.equal(t('fr', 'madeWith'), 'Fait avec amour par Mamadou (ingénieur) et Rehana (designer) <3');
+  assert.equal(t('en', 'madeWith'), 'Made with love by Rehana (Designer) and Mamadou (Engineer) ❤️');
+  assert.equal(t('fr', 'madeWith'), 'Fait avec amour par Rehana (designer) et Mamadou (ingénieur) ❤️');
 });
