@@ -106,7 +106,7 @@ async function main() {
     const price = await stripePost('prices', new URLSearchParams({
       product: product.id,
       currency: 'usd',
-      unit_amount: String(gift.priceUsd * 100),
+      unit_amount: String(Math.round(gift.priceUsd * 100)),
     }), key);
     const link = await stripePost('payment_links', buildPaymentLinkParams(gift, price.id, SITE_URL), key);
     gift.paymentLink = link.url;

@@ -1,5 +1,45 @@
 [
   {
+    "id": "nyc-dollar-slice",
+    "priceUsd": 1.5,
+    "image": "images/gifts/nyc-dollar-slice.jpg",
+    "credit": {
+      "name": "Contributorwiki12",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:New_York_Pizza_Slices.png"
+    },
+    "title": {
+      "en": "Rehana's first dollar slice in NYC",
+      "fr": "La première « dollar slice » de Rehana à New York"
+    },
+    "description": {
+      "en": "Rehana's very first New York dollar slice: folded in half and eaten standing up on the sidewalk, like a real New Yorker. Unfortunately, it ain't a dollar no more.",
+      "fr": "La toute première « dollar slice » new-yorkaise de Rehana : pliée en deux et mangée debout sur le trottoir, comme une vraie New-Yorkaise. Malheureusement, ça ne coûte plus un dollar."
+    },
+    "paymentLink": "https://buy.stripe.com/test_28EdR973o93BdSQ9zs4sE0k",
+    "paymentLinkId": "plink_1US7IdGrjWM1OgevhwQDpx4C"
+  },
+  {
+    "id": "thailand-mango-sticky-rice",
+    "priceUsd": 10,
+    "image": "images/gifts/thailand-mango-sticky-rice.jpg",
+    "credit": {
+      "name": "Dennis Wong",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Mango_sticy_rice_(3859549574).jpg"
+    },
+    "title": {
+      "en": "Mango sticky rice on a beach in Thailand",
+      "fr": "Du riz gluant à la mangue sur une plage en Thaïlande"
+    },
+    "description": {
+      "en": "A plate of mango sticky rice on a Thai beach, toes in the sand as the sun goes down. Sweet mango, warm coconut rice, and the two of us fighting over the last bite.",
+      "fr": "Une assiette de riz gluant à la mangue sur une plage thaïlandaise, les pieds dans le sable au coucher du soleil. De la mangue sucrée, du riz tiède au lait de coco, et nous deux qui nous disputons la dernière bouchée."
+    },
+    "paymentLink": "https://buy.stripe.com/test_fZu9AT0F0gw3g0YdPI4sE0f",
+    "paymentLinkId": "plink_1US75PGrjWM1OgevzWK9f9Lp"
+  },
+  {
     "id": "rio-carnival-beach",
     "priceUsd": 20,
     "image": "images/gifts/rio-carnival-beach.jpg",
@@ -38,6 +78,46 @@
     },
     "paymentLink": "https://buy.stripe.com/test_9B600jbjEgw38ywcLE4sE01",
     "paymentLinkId": "plink_1US5nDGrjWM1Ogevr2IyJp4y"
+  },
+  {
+    "id": "eiffel-tower",
+    "priceUsd": 38,
+    "image": "images/gifts/eiffel-tower.jpg",
+    "credit": {
+      "name": "Jebulon",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:Tour_Eiffel_1er_%C3%A9tage_vu_du_Champ_de_Mars.jpg"
+    },
+    "title": {
+      "en": "Climbing the Eiffel Tower for the first time",
+      "fr": "Monter en haut de la tour Eiffel pour la première fois"
+    },
+    "description": {
+      "en": "Tickets to the top of the Eiffel Tower for our very first time. You're covering this one, because Mamadou refuses to pay for an elevator ride just for a view.",
+      "fr": "Des billets pour le sommet de la tour Eiffel, pour notre toute première fois. C'est vous qui offrez, parce que Mamadou refuse de payer un ascenseur juste pour une vue."
+    },
+    "paymentLink": "https://buy.stripe.com/test_dRm7sL2N8frZaGEbHA4sE0l",
+    "paymentLinkId": "plink_1US7IeGrjWM1OgevVZmUxkob"
+  },
+  {
+    "id": "nigeria-entry-fee",
+    "priceUsd": 45,
+    "image": "images/gifts/nigeria-entry-fee.jpg",
+    "credit": {
+      "name": "Ei'eke",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:A_Nigeria_Jollof_Rice_with_chicken.jpg"
+    },
+    "title": {
+      "en": "Our unofficial entry fee into Nigeria",
+      "fr": "Notre « droit d'entrée » officieux au Nigeria"
+    },
+    "description": {
+      "en": "The bribe we're probably going to have to pay to get into Nigeria safe, sound and alive. All that for some crappy jollof rice. We'll let you know if it was worth it.",
+      "fr": "Le pot-de-vin qu'on devra sûrement payer pour entrer au Nigeria sains, saufs et vivants. Tout ça pour un riz jollof pas terrible. On vous dira si ça valait le coup."
+    },
+    "paymentLink": "https://buy.stripe.com/test_9B64gzafAgw3bKI6ng4sE0m",
+    "paymentLinkId": "plink_1US7IgGrjWM1OgevrUYE6XZv"
   },
   {
     "id": "new-orleans-mardi-gras",
@@ -80,26 +160,6 @@
     "paymentLinkId": "plink_1US5nGGrjWM1Ogev3PXVA6p5"
   },
   {
-    "id": "kazakhstan-horseback",
-    "priceUsd": 80,
-    "image": "images/gifts/kazakhstan-horseback.jpg",
-    "credit": {
-      "name": "Ken and Nyetta",
-      "license": "CC BY 2.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Horses_Grazing_on_the_Kazakhstani_Steppe_(7131707195).jpg"
-    },
-    "title": {
-      "en": "Horseback riding for two in Kazakhstan",
-      "fr": "Balade à cheval à deux au Kazakhstan"
-    },
-    "description": {
-      "en": "Horseback riding for two through the open steppe and mountain valleys of Kazakhstan. Just us, two horses, endless sky and no phone signal. A day to slow down and be in nature together.",
-      "fr": "Une balade à cheval à deux à travers la steppe et les vallées de montagne du Kazakhstan. Juste nous, deux chevaux, un ciel immense et pas de réseau. Une journée pour ralentir et profiter de la nature ensemble."
-    },
-    "paymentLink": "https://buy.stripe.com/test_28E9ATcnI4Nl9CA2704sE04",
-    "paymentLinkId": "plink_1US5nIGrjWM1Ogev5ezucagV"
-  },
-  {
     "id": "indonesia-treehouse",
     "priceUsd": 80,
     "image": "images/gifts/indonesia-treehouse.jpg",
@@ -120,6 +180,26 @@
     "paymentLinkId": "plink_1US5nKGrjWM1OgevuE2Qo5AD"
   },
   {
+    "id": "kazakhstan-horseback",
+    "priceUsd": 95,
+    "image": "images/gifts/kazakhstan-horseback.jpg",
+    "credit": {
+      "name": "Ken and Nyetta",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Horses_Grazing_on_the_Kazakhstani_Steppe_(7131707195).jpg"
+    },
+    "title": {
+      "en": "Horseback riding for two in Kazakhstan",
+      "fr": "Balade à cheval à deux au Kazakhstan"
+    },
+    "description": {
+      "en": "Horseback riding for two through the open steppe and mountain valleys of Kazakhstan. Just us, two horses, endless sky and no phone signal. A day to slow down and be in nature together.",
+      "fr": "Une balade à cheval à deux à travers la steppe et les vallées de montagne du Kazakhstan. Juste nous, deux chevaux, un ciel immense et pas de réseau. Une journée pour ralentir et profiter de la nature ensemble."
+    },
+    "paymentLink": "https://buy.stripe.com/test_eVq28rafA2Fd1646ng4sE0e",
+    "paymentLinkId": "plink_1US71lGrjWM1Ogeves4F6ZkH"
+  },
+  {
     "id": "grand-canyon-fuel",
     "priceUsd": 100,
     "image": "images/gifts/grand-canyon-fuel.jpg",
@@ -138,6 +218,46 @@
     },
     "paymentLink": "https://buy.stripe.com/test_6oU6oH2N85RpeWU8vo4sE06",
     "paymentLinkId": "plink_1US5nLGrjWM1OgevX6cbLlxt"
+  },
+  {
+    "id": "disneyland",
+    "priceUsd": 110,
+    "image": "images/gifts/disneyland.jpg",
+    "credit": {
+      "name": "Tuxyso",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Sleeping_Beauty_Castle_Disneyland_Anaheim_2013.jpg"
+    },
+    "title": {
+      "en": "Rehana's ticket to Disneyland",
+      "fr": "Le billet de Rehana pour Disneyland"
+    },
+    "description": {
+      "en": "One ticket to Disneyland so Rehana can relive her childhood princess fairytales. The castle, the fireworks, the mouse ears: the whole fairytale.",
+      "fr": "Un billet pour Disneyland pour que Rehana revive les contes de princesses de son enfance. Le château, les feux d'artifice, les oreilles de Mickey : tout le conte de fées."
+    },
+    "paymentLink": "https://buy.stripe.com/test_8x26oHevQfrZ7uscLE4sE0n",
+    "paymentLinkId": "plink_1US7IiGrjWM1OgevkVh6DwzV"
+  },
+  {
+    "id": "guinea-radisson",
+    "priceUsd": 125,
+    "image": "images/gifts/guinea-radisson.jpg",
+    "credit": {
+      "name": "Alpha hmd",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Un_aper%C3%A7u_de_la_ville_de_conakry.jpg"
+    },
+    "title": {
+      "en": "3 nights at the Radisson Blu in Conakry, Guinea",
+      "fr": "3 nuits au Radisson Blu de Conakry, en Guinée"
+    },
+    "description": {
+      "en": "Three nights at the Radisson Blu in Conakry, in Mamadou's homeland of Guinea. A comfortable home base while we visit family, eat way too much, and Rehana gets to know where Mamadou's story began.",
+      "fr": "Trois nuits au Radisson Blu de Conakry, en Guinée, le pays d'origine de Mamadou. Un point de chute confortable pour rendre visite à la famille, beaucoup trop manger, et pour que Rehana découvre là où l'histoire de Mamadou a commencé."
+    },
+    "paymentLink": "https://buy.stripe.com/test_14A00j2N8gw3cOMcLE4sE0g",
+    "paymentLinkId": "plink_1US75RGrjWM1OgevjVfw0xFs"
   },
   {
     "id": "iceland-car-rental",
@@ -180,28 +300,8 @@
     "paymentLinkId": "plink_1US5nOGrjWM1OgevV2EjxHJE"
   },
   {
-    "id": "guinea-radisson",
-    "priceUsd": 200,
-    "image": "images/gifts/guinea-radisson.jpg",
-    "credit": {
-      "name": "Alpha hmd",
-      "license": "CC BY-SA 4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Un_aper%C3%A7u_de_la_ville_de_conakry.jpg"
-    },
-    "title": {
-      "en": "3 nights at the Radisson Blu in Conakry, Guinea",
-      "fr": "3 nuits au Radisson Blu de Conakry, en Guinée"
-    },
-    "description": {
-      "en": "Three nights at the Radisson Blu in Conakry, in Mamadou's homeland of Guinea. A comfortable home base while we visit family, eat way too much, and Rehana gets to know where Mamadou's story began.",
-      "fr": "Trois nuits au Radisson Blu de Conakry, en Guinée, le pays d'origine de Mamadou. Un point de chute confortable pour rendre visite à la famille, beaucoup trop manger, et pour que Rehana découvre là où l'histoire de Mamadou a commencé."
-    },
-    "paymentLink": "https://buy.stripe.com/test_dRm3cv2N8bbJeWUbHA4sE09",
-    "paymentLinkId": "plink_1US5nQGrjWM1Ogevidz9pWXs"
-  },
-  {
     "id": "anjouan-comoros",
-    "priceUsd": 300,
+    "priceUsd": 250,
     "image": "images/gifts/anjouan-comoros.jpg",
     "credit": {
       "name": "Haryamouji",
@@ -216,8 +316,28 @@
       "en": "Three nights on Anjouan, the small island in the Comoros where Rehana's family is from. Volcanic hills, clove and ylang-ylang in the air, and family who will make sure we never go hungry. A trip back to Rehana's roots, together.",
       "fr": "Trois nuits à Anjouan, la petite île des Comores d'où vient la famille de Rehana. Des collines volcaniques, l'odeur des clous de girofle et de l'ylang-ylang, et une famille qui veillera à ce qu'on ne manque jamais de rien. Un retour aux racines de Rehana, ensemble."
     },
-    "paymentLink": "https://buy.stripe.com/test_fZu28rafAa7F7us4f84sE0a",
-    "paymentLinkId": "plink_1US5nSGrjWM1Ogev888u8BzG"
+    "paymentLink": "https://buy.stripe.com/test_8x228r87senVcOM2704sE0h",
+    "paymentLinkId": "plink_1US75UGrjWM1OgevozYK1LNM"
+  },
+  {
+    "id": "nyc-helicopter",
+    "priceUsd": 300,
+    "image": "images/gifts/nyc-helicopter.jpg",
+    "credit": {
+      "name": "nosha",
+      "license": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Lower_Manhattan_from_Helicopter.jpg"
+    },
+    "title": {
+      "en": "A helicopter ride over New York City",
+      "fr": "Un tour en hélicoptère au-dessus de New York"
+    },
+    "description": {
+      "en": "A helicopter ride over New York so Rehana can take in her new city all in one sweep: the skyline, Central Park, the Statue of Liberty and every bridge, all from above. Welcome home, Rehana.",
+      "fr": "Un tour en hélicoptère au-dessus de New York pour que Rehana découvre sa nouvelle ville d'un seul coup d'œil : les gratte-ciel, Central Park, la statue de la Liberté et tous les ponts, vus d'en haut. Bienvenue chez toi, Rehana."
+    },
+    "paymentLink": "https://buy.stripe.com/test_4gM14n5Zk4Nlg0Y2704sE0i",
+    "paymentLinkId": "plink_1US79uGrjWM1OgevX9at9076"
   },
   {
     "id": "uganda-gorillas",
@@ -244,9 +364,9 @@
     "priceUsd": 600,
     "image": "images/gifts/coachella.jpg",
     "credit": {
-      "name": "Daniel Ogren",
+      "name": "Alan Paone",
       "license": "CC BY 2.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Justin_Bieber_2010_5.jpg"
+      "source": "https://commons.wikimedia.org/wiki/File:Coachella_2014_sunset.jpg"
     },
     "title": {
       "en": "Our first Coachella",
@@ -258,6 +378,26 @@
     },
     "paymentLink": "https://buy.stripe.com/test_dRmcN5evQfrZcOMdPI4sE0c",
     "paymentLinkId": "plink_1US5nVGrjWM1OgevjiKWttOj"
+  },
+  {
+    "id": "saudi-umrah",
+    "priceUsd": 1000,
+    "image": "images/gifts/saudi-umrah.jpg",
+    "credit": {
+      "name": "Adli Wahid (edited by Basile Morin)",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:The_Kaaba_during_Hajj_-_edited.jpg"
+    },
+    "title": {
+      "en": "A trip to Saudi Arabia for Umrah",
+      "fr": "Un voyage en Arabie saoudite pour la Omra"
+    },
+    "description": {
+      "en": "Umrah together as husband and wife. A trip to Mecca and Medina to pray, reflect and give thanks for everything that brought us here, and for all of you. We'll keep you in our duas.",
+      "fr": "La Omra ensemble, en tant que mari et femme. Un voyage à La Mecque et à Médine pour prier, méditer et rendre grâce pour tout ce qui nous a menés ici, et pour chacun d'entre vous. Vous serez dans nos douas."
+    },
+    "paymentLink": "https://buy.stripe.com/test_5kQ6oH73o93BaGE6ng4sE0j",
+    "paymentLinkId": "plink_1US79vGrjWM1Ogev3gafDoqR"
   },
   {
     "id": "serengeti-four-seasons",

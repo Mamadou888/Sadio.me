@@ -4,13 +4,14 @@ import fs from 'node:fs';
 
 const gifts = JSON.parse(fs.readFileSync(new URL('../data/gifts.json', import.meta.url)));
 
-test('has the 14 spec gifts with spec prices', () => {
+test('has the 21 spec gifts with spec prices', () => {
   assert.deepEqual(gifts.map(g => [g.id, g.priceUsd]), [
-    ['rio-carnival-beach', 20], ['vietnam-homestay', 35], ['new-orleans-mardi-gras', 50],
-    ['petra-quad-bike', 70], ['kazakhstan-horseback', 80], ['indonesia-treehouse', 80],
-    ['grand-canyon-fuel', 100], ['iceland-car-rental', 150], ['tahiti-dolphins', 200],
-    ['guinea-radisson', 200], ['anjouan-comoros', 300], ['uganda-gorillas', 400],
-    ['coachella', 600], ['serengeti-four-seasons', 2000],
+    ['nyc-dollar-slice', 1.5], ['thailand-mango-sticky-rice', 10], ['rio-carnival-beach', 20], ['vietnam-homestay', 35],
+    ['eiffel-tower', 38], ['nigeria-entry-fee', 45], ['new-orleans-mardi-gras', 50], ['petra-quad-bike', 70],
+    ['indonesia-treehouse', 80], ['kazakhstan-horseback', 95], ['grand-canyon-fuel', 100], ['disneyland', 110],
+    ['guinea-radisson', 125], ['iceland-car-rental', 150], ['tahiti-dolphins', 200], ['anjouan-comoros', 250],
+    ['nyc-helicopter', 300], ['uganda-gorillas', 400], ['coachella', 600], ['saudi-umrah', 1000],
+    ['serengeti-four-seasons', 2000],
   ]);
 });
 

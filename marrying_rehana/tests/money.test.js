@@ -13,3 +13,8 @@ test('French shows approximate whole euros', () => {
   assert.equal(n(formatPrice(150, 'fr', 0.86)), '≈ 129 €');
   assert.equal(n(formatPrice(2000, 'fr', 0.86)), '≈ 1 720 €');
 });
+
+test('prices with cents keep their cents', () => {
+  assert.equal(formatPrice(1.5, 'en', 0.86), '$1.50');
+  assert.equal(n(formatPrice(1.5, 'fr', 0.86)), '≈ 1,29 €');
+});

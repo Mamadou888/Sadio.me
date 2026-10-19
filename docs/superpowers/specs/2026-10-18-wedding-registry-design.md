@@ -45,27 +45,38 @@ Prices in USD. `id` is the stable key used everywhere. Image = Unsplash search t
 
 | id | USD | Title (EN) | Title (FR) | Photo subject |
 |---|---|---|---|---|
+| `nyc-dollar-slice` | 1.5 | Rehana's first dollar slice in NYC | La première « dollar slice » de Rehana à New York | New York pizza slices |
+| `thailand-mango-sticky-rice` | 10 | Mango sticky rice on a beach in Thailand | Du riz gluant à la mangue sur une plage en Thaïlande | mango sticky rice |
 | `rio-carnival-beach` | 20 | A beach day in Rio during Carnival | Une journée à la plage à Rio pendant le carnaval | copacabana beach rio |
 | `vietnam-homestay` | 35 | 3 nights at a homestay in northern Vietnam | 3 nuits chez l'habitant dans le nord du Vietnam | sapa rice terraces village |
+| `eiffel-tower` | 38 | Climbing the Eiffel Tower for the first time | Monter en haut de la tour Eiffel pour la première fois | The Eiffel Tower from below |
+| `nigeria-entry-fee` | 45 | Our unofficial entry fee into Nigeria | Notre « droit d'entrée » officieux au Nigeria | Nigerian jollof rice |
 | `new-orleans-mardi-gras` | 50 | A Cajun feast at Mardi Gras in New Orleans | Un festin cajun à Mardi Gras à La Nouvelle-Orléans | Bourbon Street, Mardi Gras |
 | `petra-quad-bike` | 70 | Quad biking in the desert near Petra, Jordan | Du quad dans le désert près de Pétra, en Jordanie | jordan desert quad / wadi rum |
-| `kazakhstan-horseback` | 80 | Horseback riding for two in Kazakhstan | Balade à cheval à deux au Kazakhstan | kazakhstan horses mountains |
+| `kazakhstan-horseback` | 95 | Horseback riding for two in Kazakhstan | Balade à cheval à deux au Kazakhstan | kazakhstan horses mountains |
 | `indonesia-treehouse` | 80 | A bamboo treehouse on a small Indonesian island | Une cabane en bambou sur une petite île indonésienne | bamboo treehouse bali / nusa penida |
 | `grand-canyon-fuel` | 100 | Fuel for a Grand Canyon road trip | Le plein pour un road trip au Grand Canyon | grand canyon road |
 | `iceland-car-rental` | 150 | A rental car to chase the northern lights in Iceland | Une voiture pour chasser les aurores boréales en Islande | iceland northern lights road |
 | `tahiti-dolphins` | 200 | Swimming with dolphins in Tahiti | Nager avec les dauphins à Tahiti | dolphins tahiti / french polynesia |
-| `guinea-radisson` | 200 | 3 nights at the Radisson Blu in Conakry, Guinea | 3 nuits au Radisson Blu de Conakry, en Guinée | conakry guinea |
-| `anjouan-comoros` | 300 | 3 nights on Anjouan, Comoros | 3 nuits à Anjouan, aux Comores | anjouan comoros |
+| `disneyland` | 110 | Rehana's ticket to Disneyland | Le billet de Rehana pour Disneyland | Sleeping Beauty Castle, Disneyland |
+| `guinea-radisson` | 125 | 3 nights at the Radisson Blu in Conakry, Guinea | 3 nuits au Radisson Blu de Conakry, en Guinée | conakry guinea |
+| `anjouan-comoros` | 250 | 3 nights on Anjouan, Comoros | 3 nuits à Anjouan, aux Comores | anjouan comoros |
+| `nyc-helicopter` | 300 | A helicopter ride over New York City | Un tour en hélicoptère au-dessus de New York | Lower Manhattan from a helicopter |
 | `uganda-gorillas` | 400 | A gorilla trekking ticket in Uganda | Un ticket pour aller voir les gorilles en Ouganda | mountain gorilla uganda |
-| `coachella` | 600 | Our first Coachella | Notre tout premier Coachella | Justin Bieber on an outdoor stage |
+| `coachella` | 600 | Our first Coachella | Notre tout premier Coachella | Coachella grounds at sunset |
+| `saudi-umrah` | 1000 | A trip to Saudi Arabia for Umrah | Un voyage en Arabie saoudite pour la Omra | The Kaaba, Masjid al-Haram |
 | `serengeti-four-seasons` | 2000 | 2 nights at the Four Seasons in the Serengeti, Tanzania | 2 nuits au Four Seasons du Serengeti, en Tanzanie | serengeti safari lodge elephants |
 
 ### Photo credits
 
 | id | Credit (shown on site) | License | Source |
 |---|---|---|---|
+| `nyc-dollar-slice` | Contributorwiki12 | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:New_York_Pizza_Slices.png |
+| `thailand-mango-sticky-rice` | Dennis Wong | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Mango_sticy_rice_(3859549574).jpg |
 | `rio-carnival-beach` | bisonlux | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Praia_de_Copacabana_-_Rio_de_Janeiro,_Brasil.jpg |
 | `vietnam-homestay` | Alphab.fr | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Rice_fields_near_Sapa,_Vi%C3%AAt_Nam.jpg |
+| `eiffel-tower` | Jebulon | CC0 | https://commons.wikimedia.org/wiki/File:Tour_Eiffel_1er_%C3%A9tage_vu_du_Champ_de_Mars.jpg |
+| `nigeria-entry-fee` | Ei'eke | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:A_Nigeria_Jollof_Rice_with_chicken.jpg |
 | `new-orleans-mardi-gras` | Mobilus In Mobili | CC BY-SA 2.0 | https://commons.wikimedia.org/wiki/File:Mardi_Gras_Mounted_Patrol_-_Bourbon_Street_New_Orleans_2023.jpg |
 | `petra-quad-bike` | Peter Chisholm | CC0 | https://commons.wikimedia.org/wiki/File:Wadi_rum_desert.jpg |
 | `kazakhstan-horseback` | Ken and Nyetta | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Horses_Grazing_on_the_Kazakhstani_Steppe_(7131707195).jpg |
@@ -73,13 +84,24 @@ Prices in USD. `id` is the stable key used everywhere. Image = Unsplash search t
 | `grand-canyon-fuel` | Dietmar Rabich | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Grand_Canyon_(Arizona,_USA),_South_Rim_nahe_Tusayan_--_2012_--_6040.jpg |
 | `iceland-car-rental` | Moyan Brenn | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Aurora_borealis_(13687618934).jpg |
 | `tahiti-dolphins` | Dan Harville | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Spinner_Dolphin,_%C3%8Eles_du_Vent,_French_Polynesia_imported_from_iNaturalist_photo_251470527.jpg |
+| `disneyland` | Tuxyso | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Sleeping_Beauty_Castle_Disneyland_Anaheim_2013.jpg |
 | `guinea-radisson` | Alpha hmd | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Un_aper%C3%A7u_de_la_ville_de_conakry.jpg |
 | `anjouan-comoros` | Haryamouji | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Anjouan_-_Islands_of_Comoros.jpg |
+| `nyc-helicopter` | nosha | CC BY-SA 2.0 | https://commons.wikimedia.org/wiki/File:Lower_Manhattan_from_Helicopter.jpg |
 | `uganda-gorillas` | Charles J. Sharp | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Mountain_gorilla_(Gorilla_beringei_beringei)_female_eating_root.jpg |
-| `coachella` | Daniel Ogren | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Justin_Bieber_2010_5.jpg |
+| `coachella` | Alan Paone | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Coachella_2014_sunset.jpg |
+| `saudi-umrah` | Adli Wahid (edited by Basile Morin) | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:The_Kaaba_during_Hajj_-_edited.jpg |
 | `serengeti-four-seasons` | Michelle Maria | CC BY 3.0 | https://commons.wikimedia.org/wiki/File:Elephants_in_the_Serengeti_-_panoramio.jpg |
 
 ### Descriptions
+
+**nyc-dollar-slice**
+EN: Rehana's very first New York dollar slice: folded in half and eaten standing up on the sidewalk, like a real New Yorker. Unfortunately, it ain't a dollar no more.
+FR : La toute première « dollar slice » new-yorkaise de Rehana : pliée en deux et mangée debout sur le trottoir, comme une vraie New-Yorkaise. Malheureusement, ça ne coûte plus un dollar.
+
+**thailand-mango-sticky-rice**
+EN: A plate of mango sticky rice on a Thai beach, toes in the sand as the sun goes down. Sweet mango, warm coconut rice, and the two of us fighting over the last bite.
+FR : Une assiette de riz gluant à la mangue sur une plage thaïlandaise, les pieds dans le sable au coucher du soleil. De la mangue sucrée, du riz tiède au lait de coco, et nous deux qui nous disputons la dernière bouchée.
 
 **rio-carnival-beach**
 EN: A full day on the sand at Copacabana while Carnival takes over Rio de Janeiro. Fresh juice in hand, samba drifting in from the street, and absolutely nowhere to be. Your gift covers our beach chairs, an umbrella and an embarrassing number of passion fruit juices.
@@ -88,6 +110,14 @@ FR : Une journée entière sur le sable de Copacabana pendant que le carnaval en
 **vietnam-homestay**
 EN: Three nights with a local family in the mountains of northern Vietnam. Rice terraces out the window, home-cooked meals at their table, and a few attempts at learning Vietnamese that will probably go very badly. Simple, slow and exactly our kind of trip.
 FR : Trois nuits chez une famille dans les montagnes du nord du Vietnam. Des rizières en terrasses par la fenêtre, des repas faits maison à leur table, et quelques tentatives d'apprendre le vietnamien qui risquent de très mal se passer. Simple, lent, et exactement notre genre de voyage.
+
+**eiffel-tower**
+EN: Tickets to the top of the Eiffel Tower for our very first time. You're covering this one, because Mamadou refuses to pay for an elevator ride just for a view.
+FR : Des billets pour le sommet de la tour Eiffel, pour notre toute première fois. C'est vous qui offrez, parce que Mamadou refuse de payer un ascenseur juste pour une vue.
+
+**nigeria-entry-fee**
+EN: The bribe we're probably going to have to pay to get into Nigeria safe, sound and alive. All that for some crappy jollof rice. We'll let you know if it was worth it.
+FR : Le pot-de-vin qu'on devra sûrement payer pour entrer au Nigeria sains, saufs et vivants. Tout ça pour un riz jollof pas terrible. On vous dira si ça valait le coup.
 
 **new-orleans-mardi-gras**
 EN: A big Cajun feast in New Orleans during Mardi Gras: gumbo, crawfish, jambalaya, the works. Then we walk it off chasing parades and catching beads. Come hungry, leave happy.
@@ -117,6 +147,10 @@ FR : Une voiture de location pour sillonner l'Islande en hiver. On chassera les 
 EN: Swimming with wild dolphins in the warm, impossibly blue Pacific off Tahiti. The kind of story we'll be telling our grandkids about.
 FR : Nager avec des dauphins sauvages dans les eaux chaudes et incroyablement bleues du Pacifique, au large de Tahiti. Le genre d'histoire qu'on racontera à nos petits-enfants.
 
+**disneyland**
+EN: One ticket to Disneyland so Rehana can relive her childhood princess fairytales. The castle, the fireworks, the mouse ears: the whole fairytale.
+FR : Un billet pour Disneyland pour que Rehana revive les contes de princesses de son enfance. Le château, les feux d'artifice, les oreilles de Mickey : tout le conte de fées.
+
 **guinea-radisson**
 EN: Three nights at the Radisson Blu in Conakry, in Mamadou's homeland of Guinea. A comfortable home base while we visit family, eat way too much, and Rehana gets to know where Mamadou's story began.
 FR : Trois nuits au Radisson Blu de Conakry, en Guinée, le pays d'origine de Mamadou. Un point de chute confortable pour rendre visite à la famille, beaucoup trop manger, et pour que Rehana découvre là où l'histoire de Mamadou a commencé.
@@ -125,6 +159,10 @@ FR : Trois nuits au Radisson Blu de Conakry, en Guinée, le pays d'origine de Ma
 EN: Three nights on Anjouan, the small island in the Comoros where Rehana's family is from. Volcanic hills, clove and ylang-ylang in the air, and family who will make sure we never go hungry. A trip back to Rehana's roots, together.
 FR : Trois nuits à Anjouan, la petite île des Comores d'où vient la famille de Rehana. Des collines volcaniques, l'odeur des clous de girofle et de l'ylang-ylang, et une famille qui veillera à ce qu'on ne manque jamais de rien. Un retour aux racines de Rehana, ensemble.
 
+**nyc-helicopter**
+EN: A helicopter ride over New York so Rehana can take in her new city all in one sweep: the skyline, Central Park, the Statue of Liberty and every bridge, all from above. Welcome home, Rehana.
+FR : Un tour en hélicoptère au-dessus de New York pour que Rehana découvre sa nouvelle ville d'un seul coup d'œil : les gratte-ciel, Central Park, la statue de la Liberté et tous les ponts, vus d'en haut. Bienvenue chez toi, Rehana.
+
 **uganda-gorillas**
 EN: One ticket to trek through the misty forests of Uganda and sit a few meters from a family of mountain gorillas. A bucket-list moment for both of us, and one we'll never forget.
 FR : Un ticket pour marcher dans les forêts brumeuses de l'Ouganda et s'asseoir à quelques mètres d'une famille de gorilles des montagnes. Un rêve pour nous deux, et un moment qu'on n'oubliera jamais.
@@ -132,6 +170,10 @@ FR : Un ticket pour marcher dans les forêts brumeuses de l'Ouganda et s'asseoir
 **coachella**
 EN: Our first ever Coachella, out in the California desert. Sunshine, good music and fingers crossed that Justin Bieber shows up. If he does, you'll hear us screaming from wherever you are.
 FR : Notre tout premier Coachella, en plein désert californien. Du soleil, de la bonne musique, et on croise les doigts pour que Justin Bieber soit là. S'il vient, vous nous entendrez crier d'où vous êtes.
+
+**saudi-umrah**
+EN: Umrah together as husband and wife. A trip to Mecca and Medina to pray, reflect and give thanks for everything that brought us here, and for all of you. We'll keep you in our duas.
+FR : La Omra ensemble, en tant que mari et femme. Un voyage à La Mecque et à Médine pour prier, méditer et rendre grâce pour tout ce qui nous a menés ici, et pour chacun d'entre vous. Vous serez dans nos douas.
 
 **serengeti-four-seasons**
 EN: Two nights at the Four Seasons in the Serengeti, in Rehana's homeland of Tanzania. The bougiest hotel two kids from humble beginnings could ever dream of: elephants at the watering hole below the pool and sunsets over the savanna. If you've always wanted to spoil us, this is the one.

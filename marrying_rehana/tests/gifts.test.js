@@ -7,20 +7,20 @@ const gifts = JSON.parse(fs.readFileSync(new URL('../data/gifts.json', import.me
 const ids = list => list.map(g => g.id);
 
 test('sortGifts asc puts cheapest first', () => {
-  assert.deepEqual(ids(sortGifts(gifts, 'asc')).slice(0, 2), ['rio-carnival-beach', 'vietnam-homestay']);
+  assert.deepEqual(ids(sortGifts(gifts, 'asc')).slice(0, 2), ['nyc-dollar-slice', 'thailand-mango-sticky-rice']);
   assert.equal(sortGifts(gifts, 'asc').at(-1).id, 'serengeti-four-seasons');
 });
 
 test('sortGifts desc puts most expensive first', () => {
   assert.equal(sortGifts(gifts, 'desc')[0].id, 'serengeti-four-seasons');
-  assert.equal(sortGifts(gifts, 'desc').at(-1).id, 'rio-carnival-beach');
+  assert.equal(sortGifts(gifts, 'desc').at(-1).id, 'nyc-dollar-slice');
 });
 
 test('sortGifts keeps list order for equal prices in both directions', () => {
+  const tied = [{ id: 'x', priceUsd: 50 }, { id: 'first', priceUsd: 80 }, { id: 'second', priceUsd: 80 }];
   for (const order of ['asc', 'desc']) {
-    const sorted = ids(sortGifts(gifts, order));
-    assert.ok(sorted.indexOf('kazakhstan-horseback') < sorted.indexOf('indonesia-treehouse'), order);
-    assert.ok(sorted.indexOf('tahiti-dolphins') < sorted.indexOf('guinea-radisson'), order);
+    const sorted = ids(sortGifts(tied, order));
+    assert.ok(sorted.indexOf('first') < sorted.indexOf('second'), order);
   }
 });
 
