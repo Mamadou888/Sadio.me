@@ -16,8 +16,8 @@
       "en": "A full day on the sand at Copacabana while Carnival takes over Rio de Janeiro. Fresh juice in hand, samba drifting in from the street, and absolutely nowhere to be. Your gift covers our beach chairs, an umbrella and an embarrassing number of passion fruit juices.",
       "fr": "Une journée entière sur le sable de Copacabana pendant que le carnaval envahit Rio de Janeiro. Un jus frais à la main, la samba qui monte de la rue, et nulle part où aller. Votre cadeau couvre nos transats, le parasol et un nombre gênant de jus de fruit de la passion."
     },
-    "paymentLink": null,
-    "paymentLinkId": null
+    "paymentLink": "https://buy.stripe.com/test_cNiaEX1J4bbJbKI2704sE00",
+    "paymentLinkId": "plink_1US5nBGrjWM1OgevuQ1foBVV"
   },
   {
     "id": "vietnam-homestay",
@@ -36,8 +36,8 @@
       "en": "Three nights with a local family in the mountains of northern Vietnam. Rice terraces out the window, home-cooked meals at their table, and a few attempts at learning Vietnamese that will probably go very badly. Simple, slow and exactly our kind of trip.",
       "fr": "Trois nuits chez une famille dans les montagnes du nord du Vietnam. Des rizières en terrasses par la fenêtre, des repas faits maison à leur table, et quelques tentatives d'apprendre le vietnamien qui risquent de très mal se passer. Simple, lent, et exactement notre genre de voyage."
     },
-    "paymentLink": null,
-    "paymentLinkId": null
+    "paymentLink": "https://buy.stripe.com/test_9B600jbjEgw38ywcLE4sE01",
+    "paymentLinkId": "plink_1US5nDGrjWM1Ogevr2IyJp4y"
   },
   {
     "id": "new-orleans-mardi-gras",
@@ -56,8 +56,8 @@
       "en": "A big Cajun feast in New Orleans during Mardi Gras: gumbo, crawfish, jambalaya, the works. Then we walk it off chasing parades and catching beads. Come hungry, leave happy.",
       "fr": "Un grand festin cajun à La Nouvelle-Orléans pendant Mardi Gras : gumbo, écrevisses, jambalaya, tout y passe. Ensuite, on digère en suivant les défilés et en attrapant des colliers. Arriver affamés, repartir heureux."
     },
-    "paymentLink": null,
-    "paymentLinkId": null
+    "paymentLink": "https://buy.stripe.com/test_28EdR9fzUcfN020eTM4sE02",
+    "paymentLinkId": "plink_1US5nFGrjWM1OgeviHEOFD9u"
   },
   {
     "id": "petra-quad-bike",
@@ -76,8 +76,8 @@
       "en": "Quad biking across the red desert around Petra, Jordan. Mamadou is the better driver, so we're only taking one bike ;) Rehana gets the view, Mamadou gets the bragging rights, and we both get covered in sand.",
       "fr": "Du quad à travers le désert rouge autour de Pétra, en Jordanie. Mamadou conduit mieux, donc on ne prend qu'un seul quad ;) Rehana profite de la vue, Mamadou de la gloire, et on finit tous les deux couverts de sable."
     },
-    "paymentLink": null,
-    "paymentLinkId": null
+    "paymentLink": "https://buy.stripe.com/test_6oUbJ10F05Rp3ec5jc4sE03",
+    "paymentLinkId": "plink_1US5nGGrjWM1Ogev3PXVA6p5"
   },
   {
     "id": "kazakhstan-horseback",
@@ -96,8 +96,8 @@
       "en": "Horseback riding for two through the open steppe and mountain valleys of Kazakhstan. Just us, two horses, endless sky and no phone signal. A day to slow down and be in nature together.",
       "fr": "Une balade à cheval à deux à travers la steppe et les vallées de montagne du Kazakhstan. Juste nous, deux chevaux, un ciel immense et pas de réseau. Une journée pour ralentir et profiter de la nature ensemble."
     },
-    "paymentLink": null,
-    "paymentLinkId": null
+    "paymentLink": "https://buy.stripe.com/test_28E9ATcnI4Nl9CA2704sE04",
+    "paymentLinkId": "plink_1US5nIGrjWM1Ogev5ezucagV"
   },
   {
     "id": "indonesia-treehouse",
@@ -116,8 +116,8 @@
       "en": "A stay in a bamboo treehouse on a small Indonesian island. We'll wake up to the jungle, explore the island by scooter and fall asleep to the sound of the waves. Tarzan and Jane, but make it a honeymoon.",
       "fr": "Un séjour dans une cabane en bambou perchée dans les arbres, sur une petite île indonésienne. Réveil dans la jungle, l'île explorée en scooter, et le bruit des vagues pour s'endormir. Tarzan et Jane, version lune de miel."
     },
-    "paymentLink": null,
-    "paymentLinkId": null
+    "paymentLink": "https://buy.stripe.com/test_8x2dR9fzU0x5dSQ2704sE05",
+    "paymentLinkId": "plink_1US5nKGrjWM1OgevuE2Qo5AD"
   },
   {
     "id": "grand-canyon-fuel",
@@ -136,8 +136,8 @@
       "en": "Fill up our tank for a road trip through the Grand Canyon in Arizona. Windows down, playlist loud, pulling over at every lookout because each one is somehow better than the last. You'll literally keep us moving.",
       "fr": "Faites le plein pour notre road trip à travers le Grand Canyon, en Arizona. Fenêtres ouvertes, musique à fond, et un arrêt à chaque point de vue parce que chacun est encore plus beau que le précédent. Grâce à vous, on avance, au sens propre."
     },
-    "paymentLink": null,
-    "paymentLinkId": null
+    "paymentLink": "https://buy.stripe.com/test_6oU6oH2N85RpeWU8vo4sE06",
+    "paymentLinkId": "plink_1US5nLGrjWM1OgevX6cbLlxt"
   },
   {
     "id": "iceland-car-rental",
@@ -156,8 +156,8 @@
       "en": "A rental car to drive across Iceland in winter. We'll chase the northern lights after dark and thaw out in natural hot springs in between. Bring on the cold.",
       "fr": "Une voiture de location pour sillonner l'Islande en hiver. On chassera les aurores boréales la nuit et on se réchauffera dans les sources chaudes entre deux routes. Vive le froid !"
     },
-    "paymentLink": null,
-    "paymentLinkId": null
+    "paymentLink": "https://buy.stripe.com/test_bJe6oHbjE6Vt8yw12W4sE07",
+    "paymentLinkId": "plink_1US5nNGrjWM1Ogevp1bESfr5"
   },
   {
     "id": "tahiti-dolphins",
@@ -176,8 +176,8 @@
       "en": "Swimming with wild dolphins in the warm, impossibly blue Pacific off Tahiti. The kind of story we'll be telling our grandkids about.",
       "fr": "Nager avec des dauphins sauvages dans les eaux chaudes et incroyablement bleues du Pacifique, au large de Tahiti. Le genre d'histoire qu'on racontera à nos petits-enfants."
     },
-    "paymentLink": null,
-    "paymentLinkId": null
+    "paymentLink": "https://buy.stripe.com/test_9B68wPbjE4Nl3ec7rk4sE08",
+    "paymentLinkId": "plink_1US5nOGrjWM1OgevV2EjxHJE"
   },
   {
     "id": "guinea-radisson",
@@ -196,8 +196,8 @@
       "en": "Three nights at the Radisson Blu in Conakry, in Mamadou's homeland of Guinea. A comfortable home base while we visit family, eat way too much, and Rehana gets to know where Mamadou's story began.",
       "fr": "Trois nuits au Radisson Blu de Conakry, en Guinée, le pays d'origine de Mamadou. Un point de chute confortable pour rendre visite à la famille, beaucoup trop manger, et pour que Rehana découvre là où l'histoire de Mamadou a commencé."
     },
-    "paymentLink": null,
-    "paymentLinkId": null
+    "paymentLink": "https://buy.stripe.com/test_dRm3cv2N8bbJeWUbHA4sE09",
+    "paymentLinkId": "plink_1US5nQGrjWM1Ogevidz9pWXs"
   },
   {
     "id": "anjouan-comoros",
@@ -216,8 +216,8 @@
       "en": "Three nights on Anjouan, the small island in the Comoros where Rehana's family is from. Volcanic hills, clove and ylang-ylang in the air, and family who will make sure we never go hungry. A trip back to Rehana's roots, together.",
       "fr": "Trois nuits à Anjouan, la petite île des Comores d'où vient la famille de Rehana. Des collines volcaniques, l'odeur des clous de girofle et de l'ylang-ylang, et une famille qui veillera à ce qu'on ne manque jamais de rien. Un retour aux racines de Rehana, ensemble."
     },
-    "paymentLink": null,
-    "paymentLinkId": null
+    "paymentLink": "https://buy.stripe.com/test_fZu28rafAa7F7us4f84sE0a",
+    "paymentLinkId": "plink_1US5nSGrjWM1Ogev888u8BzG"
   },
   {
     "id": "uganda-gorillas",
@@ -236,8 +236,8 @@
       "en": "One ticket to trek through the misty forests of Uganda and sit a few meters from a family of mountain gorillas. A bucket-list moment for both of us, and one we'll never forget.",
       "fr": "Un ticket pour marcher dans les forêts brumeuses de l'Ouganda et s'asseoir à quelques mètres d'une famille de gorilles des montagnes. Un rêve pour nous deux, et un moment qu'on n'oubliera jamais."
     },
-    "paymentLink": null,
-    "paymentLinkId": null
+    "paymentLink": "https://buy.stripe.com/test_fZu8wP9bw4Nl9CA12W4sE0b",
+    "paymentLinkId": "plink_1US5nTGrjWM1OgevFz4qy9TG"
   },
   {
     "id": "coachella",
@@ -256,8 +256,8 @@
       "en": "Our first ever Coachella, out in the California desert. Sunshine, good music and fingers crossed that Justin Bieber shows up. If he does, you'll hear us screaming from wherever you are.",
       "fr": "Notre tout premier Coachella, en plein désert californien. Du soleil, de la bonne musique, et on croise les doigts pour que Justin Bieber soit là. S'il vient, vous nous entendrez crier d'où vous êtes."
     },
-    "paymentLink": null,
-    "paymentLinkId": null
+    "paymentLink": "https://buy.stripe.com/test_dRmcN5evQfrZcOMdPI4sE0c",
+    "paymentLinkId": "plink_1US5nVGrjWM1OgevjiKWttOj"
   },
   {
     "id": "serengeti-four-seasons",
@@ -276,7 +276,7 @@
       "en": "Two nights at the Four Seasons in the Serengeti, in Rehana's homeland of Tanzania. The bougiest hotel two kids from humble beginnings could ever dream of: elephants at the watering hole below the pool and sunsets over the savanna. If you've always wanted to spoil us, this is the one.",
       "fr": "Deux nuits au Four Seasons du Serengeti, en Tanzanie, le pays d'origine de Rehana. L'hôtel le plus chic dont deux enfants partis de rien puissent rêver : des éléphants au point d'eau sous la piscine et des couchers de soleil sur la savane. Si vous avez toujours voulu nous gâter, c'est celui-là."
     },
-    "paymentLink": null,
-    "paymentLinkId": null
+    "paymentLink": "https://buy.stripe.com/test_8x24gzdrMdjR1648vo4sE0d",
+    "paymentLinkId": "plink_1US5nWGrjWM1OgevivVaoGlf"
   }
 ]
