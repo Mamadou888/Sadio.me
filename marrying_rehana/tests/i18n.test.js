@@ -48,3 +48,8 @@ test('third blurb paragraph opens with the "future moment" sentence', () => {
   assert.ok(STRINGS.en.blurb[2].startsWith('So every gift here is a future moment: a trip, an adventure, a meal we dream of experiencing together.'));
   assert.ok(STRINGS.fr.blurb[2].startsWith('Alors chaque cadeau ici est un moment à venir : un voyage, une aventure, un repas que nous rêvons de vivre ensemble.'));
 });
+
+test('made-with-love line credits both of us in each language', () => {
+  assert.equal(t('en', 'madeWith'), 'Made with love by Mamadou (Engineer) and Rehana (Designer) <3');
+  assert.equal(t('fr', 'madeWith'), 'Fait avec amour par Mamadou (ingénieur) et Rehana (designer) <3');
+});

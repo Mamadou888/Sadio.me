@@ -4,6 +4,7 @@
 //   STRIPE_SECRET_KEY=sk_live_... node scripts/create-payment-links.mjs --reset    # every gift (test → live)
 //   STRIPE_SECRET_KEY=sk_live_... node scripts/create-payment-links.mjs --only coachella  # one gift (e.g. new price)
 //   STRIPE_SECRET_KEY=sk_test_... node scripts/create-payment-links.mjs --update-fields   # push new checkout field labels to existing links
+//   STRIPE_SECRET_KEY=sk_test_... node scripts/create-payment-links.mjs --update-products # push edited titles/descriptions/images to Stripe
 import fs from 'node:fs';
 import { pathToFileURL } from 'node:url';
 
@@ -52,6 +53,14 @@ export function buildPaymentLinkParams(gift, priceId, siteUrl) {
   return buildCustomFieldParams(p);
 }
 
+export function buildProductParams(gift, siteUrl) {
+  return new URLSearchParams({
+    name: gift.title.en,
+    description: gift.description.en,
+    'images[0]': `${siteUrl}/${gift.image}`,
+  });
+}
+
 export function selectGifts(gifts, { reset, only }) {
   if (only) {
     const picked = gifts.filter(g => g.id === only);
@@ -72,6 +81,13 @@ async function stripePost(path, params, key) {
   return body;
 }
 
+async function stripeGet(path, key) {
+  const res = await fetch(`https://api.stripe.com/v1/${path}`, { headers: { Authorization: `Bearer ${key}` } });
+  const body = await res.json();
+  if (!res.ok) throw new Error(`Stripe ${path} failed (${res.status}): ${body.error?.message ?? JSON.stringify(body)}`);
+  return body;
+}
+
 function parseArgs(argv) {
   const onlyIndex = argv.indexOf('--only');
   return { reset: argv.includes('--reset'), only: onlyIndex >= 0 ? argv[onlyIndex + 1] ?? '' : null };
@@ -84,6 +100,14 @@ async function main() {
   if (opts.only === '') throw new Error('--only needs a gift id');
 
   const gifts = JSON.parse(fs.readFileSync(GIFTS_PATH));
+  if (process.argv.includes('--update-products')) {
+    for (const gift of gifts.filter(g => g.paymentLinkId)) {
+      const items = await stripeGet(`payment_links/${gift.paymentLinkId}/line_items`, key);
+      await stripePost(`products/${items.data[0].price.product}`, buildProductParams(gift, SITE_URL), key);
+      console.log(`${gift.id} product updated`);
+    }
+    return;
+  }
   if (process.argv.includes('--update-fields')) {
     for (const gift of gifts.filter(g => g.paymentLinkId)) {
       await stripePost(`payment_links/${gift.paymentLinkId}`, buildCustomFieldParams(), key);
@@ -98,11 +122,7 @@ async function main() {
     if (opts.only && gift.paymentLinkId) {
       await stripePost(`payment_links/${gift.paymentLinkId}`, new URLSearchParams({ active: 'false' }), key);
     }
-    const product = await stripePost('products', new URLSearchParams({
-      name: gift.title.en,
-      description: gift.description.en,
-      'images[0]': `${SITE_URL}/${gift.image}`,
-    }), key);
+    const product = await stripePost('products', buildProductParams(gift, SITE_URL), key);
     const price = await stripePost('prices', new URLSearchParams({
       product: product.id,
       currency: 'usd',

@@ -1,7 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import { buildPaymentLinkParams, buildCustomFieldParams, selectGifts } from '../scripts/create-payment-links.mjs';
+import { buildPaymentLinkParams, buildCustomFieldParams, buildProductParams, selectGifts } from '../scripts/create-payment-links.mjs';
 
 const gifts = JSON.parse(fs.readFileSync(new URL('../data/gifts.json', import.meta.url)));
 const iceland = gifts.find(g => g.id === 'iceland-car-rental');
@@ -75,4 +75,12 @@ test('buildCustomFieldParams holds only the three custom fields, for updating ex
   assert.equal(f.get('custom_fields[1][optional]'), 'false');
   assert.equal(f.get('custom_fields[2][key]'), 'display');
   assert.ok([...f.keys()].every(k => k.startsWith('custom_fields[')));
+});
+
+test('buildProductParams uses the current English title, description and image', () => {
+  const guinea = gifts.find(g => g.id === 'guinea-radisson');
+  const pp = buildProductParams(guinea, 'https://sadio.me/marrying_rehana');
+  assert.equal(pp.get('name'), '2 nights at the Radisson Blu in Conakry, Guinea');
+  assert.equal(pp.get('description'), guinea.description.en);
+  assert.equal(pp.get('images[0]'), 'https://sadio.me/marrying_rehana/images/gifts/guinea-radisson.jpg');
 });

@@ -60,7 +60,7 @@ test('card without a payment link renders a disabled button', () => {
 test('renderGrid renders every gift in the requested order with status', () => {
   const grid = renderGrid(gifts, { coachella: { name: 'Sam', note: null } }, 'en', 0.86, 'desc');
   const order = [...grid.matchAll(/data-id="([^"]+)"/g)].map(m => m[1]);
-  assert.equal(order.length, 23);
+  assert.equal(order.length, 24);
   assert.equal(order[0], 'serengeti-four-seasons');
   assert.ok(grid.includes('from Sam'));
 });

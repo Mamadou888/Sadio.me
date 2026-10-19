@@ -139,10 +139,12 @@ body {
 
 .credits {
   max-width: 1140px;
-  margin: 48px auto 0;
+  margin: 8px auto 0;
   color: #999;
   font-size: 12px;
 }
+.made-with { text-align: center; margin: 56px 0 0; color: var(--muted); font-size: 14px; }
+
 .credits-toggle { text-align: center; }
 .credits-toggle summary { cursor: pointer; display: inline-block; font-weight: 600; padding: 4px 8px; }
 .credits-toggle summary:hover { color: var(--text); }
