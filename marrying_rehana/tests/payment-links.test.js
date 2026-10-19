@@ -1,7 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import { buildPaymentLinkParams, selectGifts } from '../scripts/create-payment-links.mjs';
+import { buildPaymentLinkParams, buildCustomFieldParams, selectGifts } from '../scripts/create-payment-links.mjs';
 
 const gifts = JSON.parse(fs.readFileSync(new URL('../data/gifts.json', import.meta.url)));
 const iceland = gifts.find(g => g.id === 'iceland-car-rental');
@@ -19,20 +19,20 @@ test('redirects back to the registry with the gift id', () => {
   assert.equal(p.get('after_completion[redirect][url]'), 'https://sadio.me/marrying_rehana/?gifted=iceland-car-rental');
 });
 
-test('optional display-name text field', () => {
+test('required name text field', () => {
   assert.equal(p.get('custom_fields[0][key]'), 'guestname');
   assert.equal(p.get('custom_fields[0][type]'), 'text');
   assert.equal(p.get('custom_fields[0][label][type]'), 'custom');
-  assert.equal(p.get('custom_fields[0][label][custom]'), 'Name to show / Nom à afficher');
-  assert.equal(p.get('custom_fields[0][optional]'), 'true');
+  assert.equal(p.get('custom_fields[0][label][custom]'), 'Your name / Votre nom');
+  assert.equal(p.get('custom_fields[0][optional]'), 'false');
   assert.equal(p.get('custom_fields[0][text][maximum_length]'), '60');
 });
 
-test('optional note text field', () => {
+test('required note text field', () => {
   assert.equal(p.get('custom_fields[1][key]'), 'guestnote');
   assert.equal(p.get('custom_fields[1][type]'), 'text');
-  assert.equal(p.get('custom_fields[1][label][custom]'), 'A note for us / Un mot pour nous');
-  assert.equal(p.get('custom_fields[1][optional]'), 'true');
+  assert.equal(p.get('custom_fields[1][label][custom]'), 'Please leave us a note / Laissez-nous un mot');
+  assert.equal(p.get('custom_fields[1][optional]'), 'false');
   assert.equal(p.get('custom_fields[1][text][maximum_length]'), '255');
 });
 
@@ -67,4 +67,12 @@ test('selectGifts --only selects one gift even if it has a link', () => {
 
 test('selectGifts --only rejects unknown ids', () => {
   assert.throws(() => selectGifts([a, b], { reset: false, only: 'nope' }), /Unknown gift id: nope/);
+});
+
+test('buildCustomFieldParams holds only the three custom fields, for updating existing links', () => {
+  const f = buildCustomFieldParams();
+  assert.equal(f.get('custom_fields[0][key]'), 'guestname');
+  assert.equal(f.get('custom_fields[1][optional]'), 'false');
+  assert.equal(f.get('custom_fields[2][key]'), 'display');
+  assert.ok([...f.keys()].every(k => k.startsWith('custom_fields[')));
 });

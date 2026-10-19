@@ -3,6 +3,7 @@
 //   STRIPE_SECRET_KEY=sk_test_... node scripts/create-payment-links.mjs            # gifts without a link
 //   STRIPE_SECRET_KEY=sk_live_... node scripts/create-payment-links.mjs --reset    # every gift (test → live)
 //   STRIPE_SECRET_KEY=sk_live_... node scripts/create-payment-links.mjs --only coachella  # one gift (e.g. new price)
+//   STRIPE_SECRET_KEY=sk_test_... node scripts/create-payment-links.mjs --update-fields   # push new checkout field labels to existing links
 import fs from 'node:fs';
 import { pathToFileURL } from 'node:url';
 
@@ -11,8 +12,8 @@ const GIFTS_PATH = new URL('../data/gifts.json', import.meta.url);
 const INACTIVE_MESSAGE = 'This gift has already been given. Thank you! 🤍 / Ce cadeau a déjà été offert. Merci ! 🤍';
 
 const CUSTOM_FIELDS = [
-  { key: 'guestname', type: 'text', label: 'Name to show / Nom à afficher', optional: true, maxLength: 60 },
-  { key: 'guestnote', type: 'text', label: 'A note for us / Un mot pour nous', optional: true, maxLength: 255 },
+  { key: 'guestname', type: 'text', label: 'Your name / Votre nom', optional: false, maxLength: 60 },
+  { key: 'guestnote', type: 'text', label: 'Please leave us a note / Laissez-nous un mot', optional: false, maxLength: 255 },
   {
     key: 'display', type: 'dropdown', label: 'Show on the registry? / Afficher ?', optional: false,
     options: [
@@ -23,14 +24,7 @@ const CUSTOM_FIELDS = [
   },
 ];
 
-export function buildPaymentLinkParams(gift, priceId, siteUrl) {
-  const p = new URLSearchParams();
-  p.set('line_items[0][price]', priceId);
-  p.set('line_items[0][quantity]', '1');
-  p.set('restrictions[completed_sessions][limit]', '1');
-  p.set('inactive_message', INACTIVE_MESSAGE);
-  p.set('after_completion[type]', 'redirect');
-  p.set('after_completion[redirect][url]', `${siteUrl}/?gifted=${gift.id}`);
+export function buildCustomFieldParams(p = new URLSearchParams()) {
   CUSTOM_FIELDS.forEach((f, i) => {
     const k = `custom_fields[${i}]`;
     p.set(`${k}[key]`, f.key);
@@ -45,6 +39,17 @@ export function buildPaymentLinkParams(gift, priceId, siteUrl) {
     });
   });
   return p;
+}
+
+export function buildPaymentLinkParams(gift, priceId, siteUrl) {
+  const p = new URLSearchParams();
+  p.set('line_items[0][price]', priceId);
+  p.set('line_items[0][quantity]', '1');
+  p.set('restrictions[completed_sessions][limit]', '1');
+  p.set('inactive_message', INACTIVE_MESSAGE);
+  p.set('after_completion[type]', 'redirect');
+  p.set('after_completion[redirect][url]', `${siteUrl}/?gifted=${gift.id}`);
+  return buildCustomFieldParams(p);
 }
 
 export function selectGifts(gifts, { reset, only }) {
@@ -79,6 +84,13 @@ async function main() {
   if (opts.only === '') throw new Error('--only needs a gift id');
 
   const gifts = JSON.parse(fs.readFileSync(GIFTS_PATH));
+  if (process.argv.includes('--update-fields')) {
+    for (const gift of gifts.filter(g => g.paymentLinkId)) {
+      await stripePost(`payment_links/${gift.paymentLinkId}`, buildCustomFieldParams(), key);
+      console.log(`${gift.id} fields updated`);
+    }
+    return;
+  }
   const save = () => fs.writeFileSync(GIFTS_PATH, JSON.stringify(gifts, null, 2) + '\n');
 
   for (const gift of selectGifts(gifts, opts)) {

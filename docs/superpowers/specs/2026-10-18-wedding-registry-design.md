@@ -22,7 +22,7 @@ rounded cards (image, title, price, button), nothing else.
 | Payments | **Stripe Payment Links**, one per gift, created by a script. Stripe-hosted checkout: all major/international cards, Apple Pay, Google Pay, Link. | Easiest checkout with no payment code; cheapest mainstream option (≈2.9% + 30¢, +1.5% international cards). PayPal costs more and can't collect the note fields as cleanly. |
 | Buy once | Each Payment Link has `restrictions.completed_sessions.limit = 1`. Stripe deactivates it after one purchase and shows `inactive_message`. The site also shows "Gifted" from the backend. | Stripe enforces it even if the site is stale. |
 | Currency | **Always charge USD.** In French mode, prices are *displayed* as an approximate euro amount (`≈ 129 €`) using a fixed rate in config, with a note that payment is in US dollars. | Charging EUR on a US Stripe account adds a 1% conversion fee on top of the international-card fee; charging USD avoids it. |
-| Name / note | Three Stripe checkout custom fields (Stripe's max is 3): display name (text, optional, ≤60), note (text, optional, ≤255), "Show on registry?" dropdown (required). | Collected inside checkout, no extra form. |
+| Name / note | Three Stripe checkout custom fields (Stripe's max is 3), all required (Mamadou, 2026-10-19): name (text, ≤60), note (text, ≤255), "Show on registry?" dropdown. The dropdown still decides what is public. | Collected inside checkout, no extra form. |
 | Storage + "who bought what" | Google Sheet + Google Apps Script (under `mamadou888@gmail.com`). A time trigger every 5 min reads completed Checkout Sessions from Stripe and appends a row per purchase. The same script serves public gift status as JSON to the site. | Stripe can't serve notes publicly. Polling avoids webhooks, which Apps Script can't verify (no access to headers) and answers with a 302. |
 | Thank-you email | Sent by the Apps Script from `mamadou888@gmail.com` when it records a purchase; English or French template based on checkout locale. Text is editable in the script. | Stripe receipts can't carry custom content. |
 | Language | English by default. Fixed, high-contrast pill button at the **top right** toggles French/English; the choice is remembered (`localStorage`) and can be forced with `?lang=fr`. Checkout opens in French via `?locale=fr` on the Payment Link. | |
@@ -148,14 +148,14 @@ EN:
 >
 > We thought about a registry full of household things we'd need. The truth is, we don't plan on sitting still anytime soon. In our heart of hearts, we want to spend as much time as we can experiencing everything this life has to offer. That is what we value most.
 >
-> So every gift here is a future memory: a trip, an adventure, a meal we dream of sharing. If you'd like to help make one happen, it would mean the absolute world to us. And when we do it, we'll send you a message and a photo from wherever we are :)
+> So every gift here is a future moment: a trip, an adventure, a meal we dream of experiencing together. If you'd like to help make one happen, it would mean the absolute world to us. And when we do it, we'll send you a message and a photo from wherever we are :)
 
 FR:
 > Votre présence, vos prières et vos vœux sont déjà largement suffisants pour nous 🤍 Cette liste est entièrement facultative. Mais pour les plus têtus d'entre vous qui souhaitent absolument nous gâter, nous avons préparé une petite liste d'envies.
 >
 > Nous avons pensé à une liste remplie d'objets pour la maison. La vérité, c'est que nous n'avons pas l'intention de nous poser de sitôt. Au fond de nos cœurs, nous voulons passer autant de temps que possible à découvrir tout ce que la vie a à offrir. C'est ce qui compte le plus pour nous.
 >
-> Alors chaque cadeau ici est un souvenir à venir : un voyage, une aventure, un repas dont nous rêvons. Si vous souhaitez nous aider à en réaliser un, cela nous toucherait énormément. Et le jour venu, nous vous enverrons un message et une photo, où que nous soyons :)
+> Alors chaque cadeau ici est un moment à venir : un voyage, une aventure, un repas que nous rêvons de vivre ensemble. Si vous souhaitez nous aider à en réaliser un, cela nous toucherait énormément. Et le jour venu, nous vous enverrons un message et une photo, où que nous soyons :)
 
 UI strings:
 
@@ -176,8 +176,8 @@ UI strings:
 
 | key | type | label (≤50 chars) | rules |
 |---|---|---|---|
-| `guestname` | text | Name to show / Nom à afficher | optional, max 60 |
-| `guestnote` | text | A note for us / Un mot pour nous | optional, max 255 |
+| `guestname` | text | Your name / Votre nom | **required**, max 60 |
+| `guestnote` | text | Please leave us a note / Laissez-nous un mot | **required**, max 255 |
 | `display` | dropdown | Show on the registry? / Afficher ? | required; options `namenote` "Name & note / Nom et mot", `nameonly` "Name only / Nom seulement", `private` "Keep private / Rester privé" |
 
 After payment Stripe redirects to `https://sadio.me/marrying_rehana/?gifted=<id>`, which shows the thank-you banner.

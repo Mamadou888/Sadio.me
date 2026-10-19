@@ -1,7 +1,8 @@
 // Wedding registry backend. Paste into the Apps Script project bound to the
 // "Wedding Registry Purchases" Google Sheet, next to Lib.gs. Setup: SETUP.md.
 
-const GIFTS_URL = 'https://sadio.me/marrying_rehana/data/gifts.json';
+// Read from GitHub directly so purchases record even if sadio.me's HTTPS certificate has a problem.
+const GIFTS_URL = 'https://raw.githubusercontent.com/Mamadou888/Sadio.me/gh-pages/marrying_rehana/data/gifts.json';
 const SHEET_NAME = 'Purchases';
 const SENDER_NAME = 'Mamadou & Rehana';
 const REPLY_TO = 'mamadou888@gmail.com';
@@ -120,7 +121,9 @@ function appendRow_(row) {
 }
 
 function getGiftsByLinkId_() {
-  const gifts = JSON.parse(UrlFetchApp.fetch(GIFTS_URL).getContentText());
+  const res = UrlFetchApp.fetch(GIFTS_URL, { muteHttpExceptions: true });
+  if (res.getResponseCode() !== 200) throw new Error('Could not load gifts from ' + GIFTS_URL + ': HTTP ' + res.getResponseCode());
+  const gifts = JSON.parse(res.getContentText());
   const byLink = {};
   gifts.forEach(g => { if (g.paymentLinkId) byLink[g.paymentLinkId] = g; });
   return byLink;
