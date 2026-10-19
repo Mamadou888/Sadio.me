@@ -56,15 +56,34 @@ body {
 .couple { width: 100%; max-width: 415px; justify-self: center; border-radius: 4px; display: block; }
 
 .thanks {
-  max-width: 720px;
-  margin: 40px auto 0;
-  padding: 16px 20px;
-  background: var(--card);
-  border-radius: 12px;
-  text-align: center;
-  font-weight: 500;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, .08);
+  position: relative;
+  max-width: 640px;
+  margin: 28px auto 0;
+  padding: 18px 48px 18px 24px;
+  background: var(--button);
+  color: #fff;
+  border-radius: 14px;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.5;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, .18);
+  animation: thanks-in .5s ease-out;
 }
+.thanks[hidden] { display: none; }
+.thanks p { margin: 0; }
+.thanks-close {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  border: 0;
+  background: transparent;
+  color: #fff;
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 4px 8px;
+}
+@keyframes thanks-in { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: none; } }
 
 .toolbar {
   display: flex;
@@ -127,7 +146,7 @@ body {
 
 .load-error { grid-column: 1 / -1; text-align: center; color: var(--muted); }
 
-.is-gifted img { filter: grayscale(.5); opacity: .8; }
+.is-gifted img { filter: grayscale(1); }
 .gifted-label { font-weight: 600; margin: 0; }
 .gifted-from { margin: 4px 0 0; color: var(--muted); }
 .gifted-note {
