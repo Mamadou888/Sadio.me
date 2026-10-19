@@ -53,3 +53,10 @@ test('made-with-love line credits both of us in each language', () => {
   assert.equal(t('en', 'madeWith'), 'Made with love by Rehana (Designer) and Mamadou (Engineer) ❤️');
   assert.equal(t('fr', 'madeWith'), 'Fait avec amour par Rehana (designer) et Mamadou (ingénieur) ❤️');
 });
+
+test('last blurb paragraph ends with a smiling emoji, not ":)"', () => {
+  for (const lang of ['en', 'fr']) {
+    assert.ok(STRINGS[lang].blurb[2].endsWith(' 😊'), lang);
+    assert.ok(!STRINGS[lang].blurb[2].includes(':)'), lang);
+  }
+});
