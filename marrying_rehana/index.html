@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rehana & Mamadou Sadio · Registry</title>
+  <meta name="description" content="Our wedding registry: future trips and adventures you can help make happen.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <button id="lang-toggle" class="lang-toggle" type="button" data-i18n="toggle">Voir en français</button>
+
+  <header class="masthead">
+    <h1 data-i18n="title">Rehana & Mamadou Sadio</h1>
+    <h2 data-i18n="registry">Registry</h2>
+  </header>
+
+  <section class="hero">
+    <div class="blurb" id="blurb"></div>
+    <img class="couple" src="images/couple.jpg" alt="Rehana and Mamadou">
+  </section>
+
+  <p id="thanks" class="thanks" data-i18n="thanks" hidden></p>
+
+  <div class="toolbar">
+    <p class="euro-note" id="euro-note" data-i18n="euroNote"></p>
+    <label class="sort">
+      <span data-i18n="sortBy">Sort by:</span>
+      <select id="sort">
+        <option value="asc" data-i18n="sortAsc">Price: low to high</option>
+        <option value="desc" data-i18n="sortDesc">Price: high to low</option>
+      </select>
+    </label>
+  </div>
+
+  <main id="grid" class="grid"></main>
+
+  <footer id="credits" class="credits"></footer>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
