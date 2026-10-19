@@ -49,7 +49,7 @@ function syncPurchases() {
   try {
     const props = PropertiesService.getScriptProperties();
     const since = Number(props.getProperty('LAST_CREATED') || 0);
-    const sessions = listCompletedSessions_(since);
+    const sessions = listCompletedSessions_(syncWindowStart(since));
     if (sessions.length === 0) return;
 
     const existingIds = readRows_().map(r => r.session_id);
@@ -61,7 +61,7 @@ function syncPurchases() {
     for (const session of fresh) {
       const row = sessionToRow(session, giftsByLinkId);
       const rowNumber = appendRow_(row);
-      if (row.guest_email) {
+      if (shouldSendThankYou(row)) {
         try {
           const email = buildThankYouEmail(EMAIL_TEMPLATES, row, giftsById[row.gift_id]);
           MailApp.sendEmail({ to: row.guest_email, subject: email.subject, body: email.body, name: SENDER_NAME, replyTo: REPLY_TO });

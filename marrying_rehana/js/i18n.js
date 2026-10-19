@@ -17,6 +17,7 @@ export const STRINGS = {
     euroNote: '',
     thanks: 'Thank you so much! 🤍 Check your inbox for a little note from us.',
     photoCredits: 'Photo credits',
+    loadError: "We couldn't load the gifts. Please refresh the page.",
   },
   fr: {
     title: 'Rehana & Mamadou Sadio',
@@ -36,6 +37,7 @@ export const STRINGS = {
     euroNote: 'Les prix en euros sont approximatifs. Le paiement est effectué en dollars américains.',
     thanks: 'Merci infiniment ! 🤍 Un petit mot de notre part vous attend dans votre boîte mail.',
     photoCredits: 'Crédits photo',
+    loadError: "Impossible de charger les cadeaux. Veuillez actualiser la page.",
   },
 };
 

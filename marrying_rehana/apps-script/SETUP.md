@@ -48,4 +48,8 @@ You need the Stripe **restricted key** from the Stripe setup (test mode first).
 - **Going live:** replace `STRIPE_KEY` with the live restricted key, delete the test rows
   (keep the header), and set `LAST_CREATED` back to `0`.
 - **Refunding a double purchase:** if two people ever buy the same gift, both rows appear here.
-  The site credits the first one. Refund the other in the Stripe dashboard (Payments → … → Refund).
+  The site credits the guest who *opened checkout* first (earliest `created_at`), which is usually
+  but not always who paid first. Refund the other in the Stripe dashboard (Payments → … → Refund).
+- **Thank-you email failed:** rows with `thank_you_sent` = `FALSE` and an email didn't get one
+  (e.g. Gmail's daily limit). Send those by hand. Purchases that don't match a registry gift
+  (`gift_id` = `unknown`) are recorded but never emailed.

@@ -5,6 +5,17 @@ var ROW_FIELDS = ['created_at', 'gift_id', 'gift_title', 'amount_usd', 'guest_em
 
 var DISPLAY_CHOICES = ['namenote', 'nameonly', 'private'];
 
+// Stripe stamps a session when checkout opens, not when it is paid, so a guest who
+// opened checkout before the last cutoff can pay after it. Sessions expire within
+// 24 hours, so looking back a day catches them; session_id dedupe absorbs the overlap.
+function syncWindowStart(lastCreated) {
+  return Math.max(0, lastCreated - 86400);
+}
+
+function shouldSendThankYou(row) {
+  return Boolean(row.guest_email) && row.gift_id !== 'unknown';
+}
+
 function filterNewSessions(sessions, existingIds) {
   const seen = new Set(existingIds);
   return sessions.filter(s => {
@@ -71,5 +82,5 @@ function buildThankYouEmail(templates, row, gift) {
 }
 
 if (typeof module !== 'undefined') {
-  module.exports = { ROW_FIELDS, filterNewSessions, sessionToRow, rowsToPublicStatus, fillTemplate, buildThankYouEmail };
+  module.exports = { ROW_FIELDS, syncWindowStart, shouldSendThankYou, filterNewSessions, sessionToRow, rowsToPublicStatus, fillTemplate, buildThankYouEmail };
 }

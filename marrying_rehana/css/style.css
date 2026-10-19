@@ -125,6 +125,8 @@ body {
 .btn:hover { background: #000; }
 .btn:disabled { opacity: .4; cursor: not-allowed; }
 
+.load-error { grid-column: 1 / -1; text-align: center; color: var(--muted); }
+
 .is-gifted img { filter: grayscale(.5); opacity: .8; }
 .gifted-label { font-weight: 600; margin: 0; }
 .gifted-from { margin: 4px 0 0; color: var(--muted); }

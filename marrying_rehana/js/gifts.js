@@ -10,6 +10,17 @@ export function checkoutUrl(gift, lang) {
 
 // Purchase status from the Apps Script. Any failure means "nothing gifted yet":
 // the page still works, and Stripe's one-purchase limit is the backstop.
+export async function loadGifts(url, fetchImpl = fetch) {
+  try {
+    const res = await fetchImpl(url);
+    if (!res.ok) return null;
+    const body = await res.json();
+    return Array.isArray(body) ? body : null;
+  } catch {
+    return null;
+  }
+}
+
 export async function loadStatus(url, fetchImpl = fetch, timeoutMs = 5000) {
   if (!url) return {};
   let timer;

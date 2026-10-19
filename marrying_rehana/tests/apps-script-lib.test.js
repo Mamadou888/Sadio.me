@@ -123,3 +123,17 @@ test('buildThankYouEmail prefers display name, then cardholder name', () => {
 test('buildThankYouEmail falls back to the row title for unknown gifts', () => {
   assert.equal(buildThankYouEmail(tpl, row({ gift_title: 'Mystery' }), undefined).body, 'Hi friend, Mystery');
 });
+
+test('syncWindowStart looks back 24 hours so late-paid checkouts are not skipped', () => {
+  const { syncWindowStart } = require('../apps-script/Lib.js');
+  assert.equal(syncWindowStart(1798761600), 1798761600 - 86400);
+  assert.equal(syncWindowStart(0), 0);
+  assert.equal(syncWindowStart(1000), 0);
+});
+
+test('shouldSendThankYou only for registry gifts with an email', () => {
+  const { shouldSendThankYou } = require('../apps-script/Lib.js');
+  assert.equal(shouldSendThankYou(row({ gift_id: 'coachella', guest_email: 'g@x.com' })), true);
+  assert.equal(shouldSendThankYou(row({ gift_id: 'unknown', guest_email: 'g@x.com' })), false);
+  assert.equal(shouldSendThankYou(row({ gift_id: 'coachella', guest_email: '' })), false);
+});

@@ -38,3 +38,8 @@ test('resolveLang: URL beats storage, junk falls back to English', () => {
   assert.equal(resolveLang('?lang=de', 'xx'), 'en');
   assert.equal(resolveLang('', null), 'en');
 });
+
+test('loadError message exists in both languages', () => {
+  assert.ok(t('en', 'loadError').includes('refresh'));
+  assert.ok(t('fr', 'loadError').includes('actualiser'));
+});

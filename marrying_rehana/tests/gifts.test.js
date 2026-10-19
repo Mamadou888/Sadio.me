@@ -60,3 +60,15 @@ test('loadStatus does not fetch when the URL is empty', async () => {
   assert.deepEqual(await loadStatus('', async () => { called = true; }), {});
   assert.equal(called, false);
 });
+
+import { loadGifts } from '../js/gifts.js';
+
+test('loadGifts returns the gift list', async () => {
+  assert.deepEqual(await loadGifts('u', async () => ({ ok: true, json: async () => [{ id: 'a' }] })), [{ id: 'a' }]);
+});
+
+test('loadGifts returns null on failure, non-OK or a non-array body', async () => {
+  assert.equal(await loadGifts('u', async () => { throw new Error('down'); }), null);
+  assert.equal(await loadGifts('u', async () => ({ ok: false })), null);
+  assert.equal(await loadGifts('u', async () => ({ ok: true, json: async () => ({}) })), null);
+});

@@ -1,6 +1,6 @@
 import { GIFTS_URL, STATUS_URL, STATUS_TIMEOUT_MS, USD_TO_EUR } from './config.js';
 import { STRINGS, t, resolveLang } from './i18n.js';
-import { loadStatus } from './gifts.js';
+import { loadGifts, loadStatus } from './gifts.js';
 import { escapeHtml, renderGrid, renderCredits } from './render.js';
 
 const LANG_KEY = 'registry-lang';
@@ -56,7 +56,12 @@ if (new URLSearchParams(location.search).has('gifted')) {
 }
 
 renderTexts();
-state.gifts = await (await fetch(GIFTS_URL)).json();
+const gifts = await loadGifts(GIFTS_URL);
+if (!gifts) {
+  document.getElementById('grid').innerHTML = `<p class="load-error">${escapeHtml(t(state.lang, 'loadError'))}</p>`;
+  throw new Error(`Could not load ${GIFTS_URL}`);
+}
+state.gifts = gifts;
 renderGifts();
 state.status = await loadStatus(STATUS_URL, fetch, STATUS_TIMEOUT_MS);
 renderGifts();
