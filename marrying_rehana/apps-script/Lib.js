@@ -52,11 +52,25 @@ function sessionToRow(session, giftsByLinkId) {
   };
 }
 
+// Reads by column position (ROW_FIELDS order), so a missing or edited header row can't break it.
+function rowsFromValues(values) {
+  return values
+    .filter(cells => cells[0] !== ROW_FIELDS[0])
+    .map(cells => {
+      const row = {};
+      ROW_FIELDS.forEach((name, i) => {
+        const v = cells[i];
+        row[name] = v instanceof Date ? v.toISOString() : v;
+      });
+      return row;
+    });
+}
+
 function rowsToPublicStatus(rows) {
   const gifted = {};
   const sorted = rows.slice().sort((a, b) => String(a.created_at).localeCompare(String(b.created_at)));
   for (const r of sorted) {
-    if (r.gift_id === 'unknown' || gifted[r.gift_id]) continue;
+    if (!r.gift_id || r.gift_id === 'unknown' || gifted[r.gift_id]) continue;
     const showName = r.display_choice === 'namenote' || r.display_choice === 'nameonly';
     const showNote = r.display_choice === 'namenote';
     gifted[r.gift_id] = {
@@ -82,5 +96,5 @@ function buildThankYouEmail(templates, row, gift) {
 }
 
 if (typeof module !== 'undefined') {
-  module.exports = { ROW_FIELDS, syncWindowStart, shouldSendThankYou, filterNewSessions, sessionToRow, rowsToPublicStatus, fillTemplate, buildThankYouEmail };
+  module.exports = { ROW_FIELDS, rowsFromValues, syncWindowStart, shouldSendThankYou, filterNewSessions, sessionToRow, rowsToPublicStatus, fillTemplate, buildThankYouEmail };
 }

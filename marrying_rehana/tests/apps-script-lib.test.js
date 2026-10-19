@@ -137,3 +137,21 @@ test('shouldSendThankYou only for registry gifts with an email', () => {
   assert.equal(shouldSendThankYou(row({ gift_id: 'unknown', guest_email: 'g@x.com' })), false);
   assert.equal(shouldSendThankYou(row({ gift_id: 'coachella', guest_email: '' })), false);
 });
+
+test('rowsFromValues maps sheet rows by column position and skips the header row', () => {
+  const { rowsFromValues } = require('../apps-script/Lib.js');
+  const data = ['2027-01-01T00:00:00.000Z', 'coachella', 'Our first Coachella', 600, 'g@x.com', 'Card', 'Sam', 'Hi', 'namenote', 'en', 'cs_1', true];
+  assert.deepEqual(rowsFromValues([ROW_FIELDS, data]).map(r => [r.gift_id, r.session_id]), [['coachella', 'cs_1']]);
+  assert.deepEqual(rowsFromValues([data]).map(r => r.gift_id), ['coachella']);
+  assert.deepEqual(rowsFromValues([]), []);
+});
+
+test('rowsFromValues turns Sheets dates back into ISO strings', () => {
+  const { rowsFromValues } = require('../apps-script/Lib.js');
+  const r = rowsFromValues([[new Date('2027-01-01T00:00:00Z'), 'a']])[0];
+  assert.equal(r.created_at, '2027-01-01T00:00:00.000Z');
+});
+
+test('rowsToPublicStatus ignores rows without a gift id', () => {
+  assert.deepEqual(rowsToPublicStatus([row({ gift_id: undefined }), row({ gift_id: '' })]), { gifted: {} });
+});

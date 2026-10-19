@@ -96,17 +96,9 @@ function getSheet_() {
 }
 
 function readRows_() {
-  const values = getSheet_().getDataRange().getValues();
-  if (values.length < 2) return [];
-  const header = values[0];
-  return values.slice(1).map(cells => {
-    const row = {};
-    header.forEach((name, i) => {
-      const v = cells[i];
-      row[name] = v instanceof Date ? v.toISOString() : v;
-    });
-    return row;
-  });
+  const sheet = getSheet_();
+  if (sheet.getLastRow() === 0) return [];
+  return rowsFromValues(sheet.getDataRange().getValues());
 }
 
 // Guest-typed text starting with = + - @ would otherwise run as a spreadsheet formula.
@@ -116,6 +108,7 @@ function safeCell_(value) {
 
 function appendRow_(row) {
   const sheet = getSheet_();
+  if (sheet.getLastRow() === 0) sheet.appendRow(ROW_FIELDS);
   sheet.appendRow(ROW_FIELDS.map(f => safeCell_(row[f])));
   return sheet.getLastRow();
 }
