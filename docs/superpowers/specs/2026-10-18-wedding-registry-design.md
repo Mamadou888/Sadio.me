@@ -57,11 +57,11 @@ Prices in USD. `id` is the stable key used everywhere. `marrying_rehana/data/gif
 | `cartagena-cooking-class` | 75 | A cooking class for two in Cartagena, Colombia | Un cours de cuisine à deux à Carthagène, en Colombie |
 | `indonesia-treehouse` | 80 | A bamboo treehouse on a small Indonesian island | Une cabane en bambou sur une petite île indonésienne |
 | `dar-es-salaam-boat` | 90 | A boat ride off the coast of Dar es Salaam | Une balade en bateau au large de Dar es Salaam |
-| `kazakhstan-horseback` | 95 | Horseback riding for two in Kazakhstan | Balade à cheval à deux au Kazakhstan |
 | `grand-canyon-fuel` | 100 | Fuel for a Grand Canyon road trip | Le plein pour un road trip au Grand Canyon |
 | `disneyland` | 110 | Rehana's ticket to Disneyland | Le billet de Rehana pour Disneyland |
-| `guinea-radisson` | 125 | 2 nights at the Radisson Blu in Conakry, Guinea | 2 nuits au Radisson Blu de Conakry, en Guinée |
 | `iceland-car-rental` | 150 | A rental car to chase the northern lights in Iceland | Une voiture pour chasser les aurores boréales en Islande |
+| `kazakhstan-horseback` | 165 | Horseback riding for two in Kazakhstan | Balade à cheval à deux au Kazakhstan |
+| `guinea-radisson` | 180 | 2 nights at the Radisson Blu in Conakry, Guinea | 2 nuits au Radisson Blu de Conakry, en Guinée |
 | `tahiti-dolphins` | 200 | Swimming with dolphins in Tahiti | Nager avec les dauphins à Tahiti |
 | `anjouan-comoros` | 250 | 3 nights on Anjouan, Comoros | 3 nuits à Anjouan, aux Comores |
 | `nyc-helicopter` | 300 | A helicopter ride over New York City | Un tour en hélicoptère au-dessus de New York |
@@ -86,11 +86,11 @@ Prices in USD. `id` is the stable key used everywhere. `marrying_rehana/data/gif
 | `cartagena-cooking-class` | PapiPijuan | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Comida_de_la_Playa_de_Santa_Ver%C3%B3nica.jpg |
 | `indonesia-treehouse` | Dini Rosyadah Tridya | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Amazing_Tree_House_at_Nusa_Penida.jpg |
 | `dar-es-salaam-boat` | David Stanley | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Indian_Ocean_Fishing_Boats_(34768090073).jpg |
-| `kazakhstan-horseback` | Ken and Nyetta | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Horses_Grazing_on_the_Kazakhstani_Steppe_(7131707195).jpg |
 | `grand-canyon-fuel` | Dietmar Rabich | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Grand_Canyon_(Arizona,_USA),_South_Rim_nahe_Tusayan_--_2012_--_6040.jpg |
 | `disneyland` | Tuxyso | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Sleeping_Beauty_Castle_Disneyland_Anaheim_2013.jpg |
-| `guinea-radisson` | Alpha hmd | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Un_aper%C3%A7u_de_la_ville_de_conakry.jpg |
 | `iceland-car-rental` | Moyan Brenn | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Aurora_borealis_(13687618934).jpg |
+| `kazakhstan-horseback` | Ken and Nyetta | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Horses_Grazing_on_the_Kazakhstani_Steppe_(7131707195).jpg |
+| `guinea-radisson` | Alpha hmd | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Un_aper%C3%A7u_de_la_ville_de_conakry.jpg |
 | `tahiti-dolphins` | Dan Harville | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Spinner_Dolphin,_%C3%8Eles_du_Vent,_French_Polynesia_imported_from_iNaturalist_photo_251470527.jpg |
 | `anjouan-comoros` | Haryamouji | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Anjouan_-_Islands_of_Comoros.jpg |
 | `nyc-helicopter` | nosha | CC BY-SA 2.0 | https://commons.wikimedia.org/wiki/File:Lower_Manhattan_from_Helicopter.jpg |
@@ -149,10 +149,6 @@ FR : Un séjour dans une cabane en bambou perchée dans les arbres, sur une peti
 EN: A boat ride off the coast of Dar es Salaam, eating fresh fish and sipping coconuts while Mamadou learns about the history of his new Swahili culture.
 FR : Une balade en bateau au large de Dar es Salaam, à manger du poisson frais et siroter des noix de coco pendant que Mamadou découvre l'histoire de sa nouvelle culture swahilie.
 
-**kazakhstan-horseback**
-EN: Horseback riding for two through the open steppe and mountain valleys of Kazakhstan. Just us, two horses, endless sky and no phone signal. A day to slow down and be in nature together.
-FR : Une balade à cheval à deux à travers la steppe et les vallées de montagne du Kazakhstan. Juste nous, deux chevaux, un ciel immense et pas de réseau. Une journée pour ralentir et profiter de la nature ensemble.
-
 **grand-canyon-fuel**
 EN: Fill up our tank for a road trip through the Grand Canyon in Arizona. We all know gas prices crazy.
 FR : Faites le plein pour notre road trip à travers le Grand Canyon, en Arizona. On sait tous que le prix de l'essence, c'est n'importe quoi.
@@ -161,13 +157,17 @@ FR : Faites le plein pour notre road trip à travers le Grand Canyon, en Arizona
 EN: One ticket to Disneyland so Rehana can relive her childhood princess fairytales. The castle, the fireworks, the mouse ears: the whole fairytale.
 FR : Un billet pour Disneyland pour que Rehana revive les contes de princesses de son enfance. Le château, les feux d'artifice, les oreilles de Mickey : tout le conte de fées.
 
-**guinea-radisson**
-EN: Two nights at the Radisson Blu in Conakry, in Mamadou's homeland of Guinea. This will specifically be for when we want to take a break from staying with all the aunties and uncles we love so much. And for Rehana to discover Fulani culture.
-FR : Deux nuits au Radisson Blu de Conakry, en Guinée, le pays d'origine de Mamadou. Ce sera spécialement pour quand on voudra souffler un peu entre deux séjours chez toutes les tatas et tontons qu'on aime tant. Et pour que Rehana découvre la culture peule.
-
 **iceland-car-rental**
 EN: A rental car to drive across Iceland in winter. We'll chase the northern lights after dark and thaw out in natural hot springs in between. Bring on the cold.
 FR : Une voiture de location pour sillonner l'Islande en hiver. On chassera les aurores boréales la nuit et on se réchauffera dans les sources chaudes entre deux routes. Vive le froid !
+
+**kazakhstan-horseback**
+EN: Horseback riding for two through the open steppe and mountain valleys of Kazakhstan. Just us, two horses, endless sky and no phone signal. A day to slow down and be in nature together.
+FR : Une balade à cheval à deux à travers la steppe et les vallées de montagne du Kazakhstan. Juste nous, deux chevaux, un ciel immense et pas de réseau. Une journée pour ralentir et profiter de la nature ensemble.
+
+**guinea-radisson**
+EN: Two nights at the Radisson Blu in Conakry, in Mamadou's homeland of Guinea. This will specifically be for when we want to take a break from staying with all the aunties and uncles we love so much. And for Rehana to discover Fulani culture.
+FR : Deux nuits au Radisson Blu de Conakry, en Guinée, le pays d'origine de Mamadou. Ce sera spécialement pour quand on voudra souffler un peu entre deux séjours chez toutes les tatas et tontons qu'on aime tant. Et pour que Rehana découvre la culture peule.
 
 **tahiti-dolphins**
 EN: Swimming with wild dolphins in the warm blue Pacific off Tahiti. The kind of story we'll be telling our grandkids about. Hopefully we don't get kidnapped by dolphins.

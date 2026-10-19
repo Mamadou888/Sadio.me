@@ -240,26 +240,6 @@
     "paymentLinkId": "plink_1US7q6GrjWM1Ogev47VWEINe"
   },
   {
-    "id": "kazakhstan-horseback",
-    "priceUsd": 95,
-    "image": "images/gifts/kazakhstan-horseback.jpg",
-    "credit": {
-      "name": "Ken and Nyetta",
-      "license": "CC BY 2.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Horses_Grazing_on_the_Kazakhstani_Steppe_(7131707195).jpg"
-    },
-    "title": {
-      "en": "Horseback riding for two in Kazakhstan",
-      "fr": "Balade à cheval à deux au Kazakhstan"
-    },
-    "description": {
-      "en": "Horseback riding for two through the open steppe and mountain valleys of Kazakhstan. Just us, two horses, endless sky and no phone signal. A day to slow down and be in nature together.",
-      "fr": "Une balade à cheval à deux à travers la steppe et les vallées de montagne du Kazakhstan. Juste nous, deux chevaux, un ciel immense et pas de réseau. Une journée pour ralentir et profiter de la nature ensemble."
-    },
-    "paymentLink": "https://buy.stripe.com/test_eVq28rafA2Fd1646ng4sE0e",
-    "paymentLinkId": "plink_1US71lGrjWM1Ogeves4F6ZkH"
-  },
-  {
     "id": "grand-canyon-fuel",
     "priceUsd": 100,
     "image": "images/gifts/grand-canyon-fuel.jpg",
@@ -300,26 +280,6 @@
     "paymentLinkId": "plink_1US7IiGrjWM1OgevkVh6DwzV"
   },
   {
-    "id": "guinea-radisson",
-    "priceUsd": 125,
-    "image": "images/gifts/guinea-radisson.jpg",
-    "credit": {
-      "name": "Alpha hmd",
-      "license": "CC BY-SA 4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Un_aper%C3%A7u_de_la_ville_de_conakry.jpg"
-    },
-    "title": {
-      "en": "2 nights at the Radisson Blu in Conakry, Guinea",
-      "fr": "2 nuits au Radisson Blu de Conakry, en Guinée"
-    },
-    "description": {
-      "en": "Two nights at the Radisson Blu in Conakry, in Mamadou's homeland of Guinea. This will specifically be for when we want to take a break from staying with all the aunties and uncles we love so much. And for Rehana to discover Fulani culture.",
-      "fr": "Deux nuits au Radisson Blu de Conakry, en Guinée, le pays d'origine de Mamadou. Ce sera spécialement pour quand on voudra souffler un peu entre deux séjours chez toutes les tatas et tontons qu'on aime tant. Et pour que Rehana découvre la culture peule."
-    },
-    "paymentLink": "https://buy.stripe.com/test_14A00j2N8gw3cOMcLE4sE0g",
-    "paymentLinkId": "plink_1US75RGrjWM1OgevjVfw0xFs"
-  },
-  {
     "id": "iceland-car-rental",
     "priceUsd": 150,
     "image": "images/gifts/iceland-car-rental.jpg",
@@ -338,6 +298,46 @@
     },
     "paymentLink": "https://buy.stripe.com/test_bJe6oHbjE6Vt8yw12W4sE07",
     "paymentLinkId": "plink_1US5nNGrjWM1Ogevp1bESfr5"
+  },
+  {
+    "id": "kazakhstan-horseback",
+    "priceUsd": 165,
+    "image": "images/gifts/kazakhstan-horseback.jpg",
+    "credit": {
+      "name": "Ken and Nyetta",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Horses_Grazing_on_the_Kazakhstani_Steppe_(7131707195).jpg"
+    },
+    "title": {
+      "en": "Horseback riding for two in Kazakhstan",
+      "fr": "Balade à cheval à deux au Kazakhstan"
+    },
+    "description": {
+      "en": "Horseback riding for two through the open steppe and mountain valleys of Kazakhstan. Just us, two horses, endless sky and no phone signal. A day to slow down and be in nature together.",
+      "fr": "Une balade à cheval à deux à travers la steppe et les vallées de montagne du Kazakhstan. Juste nous, deux chevaux, un ciel immense et pas de réseau. Une journée pour ralentir et profiter de la nature ensemble."
+    },
+    "paymentLink": "https://buy.stripe.com/test_aFafZhgDY6VtcOMbHA4sE0s",
+    "paymentLinkId": "plink_1US80kGrjWM1Ogevo1v3EgJH"
+  },
+  {
+    "id": "guinea-radisson",
+    "priceUsd": 180,
+    "image": "images/gifts/guinea-radisson.jpg",
+    "credit": {
+      "name": "Alpha hmd",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Un_aper%C3%A7u_de_la_ville_de_conakry.jpg"
+    },
+    "title": {
+      "en": "2 nights at the Radisson Blu in Conakry, Guinea",
+      "fr": "2 nuits au Radisson Blu de Conakry, en Guinée"
+    },
+    "description": {
+      "en": "Two nights at the Radisson Blu in Conakry, in Mamadou's homeland of Guinea. This will specifically be for when we want to take a break from staying with all the aunties and uncles we love so much. And for Rehana to discover Fulani culture.",
+      "fr": "Deux nuits au Radisson Blu de Conakry, en Guinée, le pays d'origine de Mamadou. Ce sera spécialement pour quand on voudra souffler un peu entre deux séjours chez toutes les tatas et tontons qu'on aime tant. Et pour que Rehana découvre la culture peule."
+    },
+    "paymentLink": "https://buy.stripe.com/test_dRm9AT5Zk1B97usfXQ4sE0r",
+    "paymentLinkId": "plink_1US80iGrjWM1OgevH3E1K1gq"
   },
   {
     "id": "tahiti-dolphins",
