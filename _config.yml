@@ -1,0 +1,1 @@
+exclude: [docs, marrying_rehana/tests, marrying_rehana/scripts, marrying_rehana/apps-script, marrying_rehana/package.json]
