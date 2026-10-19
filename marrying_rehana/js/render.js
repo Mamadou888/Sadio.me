@@ -10,7 +10,7 @@ export function escapeHtml(s) {
 
 function renderAction(gift, status, lang) {
   if (status) {
-    const from = status.name ? `<p class="gifted-from">${escapeHtml(t(lang, 'from', { name: status.name }))}</p>` : '';
+    const from = status.name ? `<p class="gifted-from">${escapeHtml(t(lang, 'by', { name: status.name }))}</p>` : '';
     const note = status.note ? `<blockquote class="gifted-note">${escapeHtml(status.note)}</blockquote>` : '';
     return `<div class="gifted"><p class="gifted-label">${escapeHtml(t(lang, 'gifted'))}</p>${from}${note}</div>`;
   }

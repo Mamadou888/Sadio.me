@@ -33,8 +33,8 @@ rounded cards (image, title, price, button), nothing else.
 
 | Guest's choice | Shown under the gift |
 |---|---|
-| `namenote` — "Name & note" | "Gifted 🤍", "from {name}" (if given), the note (if given) |
-| `nameonly` — "Name only" | "Gifted 🤍", "from {name}" (if given) |
+| `namenote` — "Name & note" | "Gifted 🤍", "by {name}" (if given), the note (if given) |
+| `nameonly` — "Name only" | "Gifted 🤍", "by {name}" (if given) |
 | `private` — "Keep private" (also the fallback) | "Gifted 🤍" only |
 
 Email addresses are never exposed by the public endpoint.
@@ -239,7 +239,7 @@ UI strings:
 | `sortDesc` | Price: high to low | Prix décroissant |
 | `giftButton` | Gift this experience | Offrir cette expérience |
 | `gifted` | Gifted 🤍 | Offert 🤍 |
-| `from` | from {name} | de la part de {name} |
+| `by` | by {name} | par {name} |
 | `euroNote` | — | Les prix en euros sont approximatifs. Le paiement est effectué en dollars américains. |
 | `thanks` | Thank you so much! 🤍 Check your inbox for a little note from us. | Merci infiniment ! 🤍 Un petit mot de notre part vous attend dans votre boîte mail. |
 | `photoCredits` | Photo credits | Crédits photo |

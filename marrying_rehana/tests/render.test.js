@@ -30,7 +30,7 @@ test('available card in French shows French text, euros and French checkout', ()
 test('gifted card shows name and note instead of the button', () => {
   const card = renderGiftCard(iceland, { name: 'Aunt Fatou', note: 'Have fun!' }, 'en', 0.86);
   assert.ok(card.includes('Gifted 🤍'));
-  assert.ok(card.includes('from Aunt Fatou'));
+  assert.ok(card.includes('by Aunt Fatou'));
   assert.ok(card.includes('Have fun!'));
   assert.ok(!card.includes('Gift this experience'));
   assert.ok(!card.includes('buy.stripe.com'));
@@ -39,7 +39,7 @@ test('gifted card shows name and note instead of the button', () => {
 test('anonymous gifted card shows only Gifted', () => {
   const card = renderGiftCard(iceland, { name: null, note: null }, 'en', 0.86);
   assert.ok(card.includes('Gifted 🤍'));
-  assert.ok(!card.includes('from '));
+  assert.ok(!card.includes('gifted-from'));
   assert.ok(!card.includes('<blockquote'));
 });
 
@@ -62,7 +62,7 @@ test('renderGrid renders every gift in the requested order with status', () => {
   const order = [...grid.matchAll(/data-id="([^"]+)"/g)].map(m => m[1]);
   assert.equal(order.length, 26);
   assert.equal(order[0], 'serengeti-four-seasons');
-  assert.ok(grid.includes('from Sam'));
+  assert.ok(grid.includes('by Sam'));
 });
 
 test('renderCredits lists each photographer, license and linked source', () => {

@@ -8,8 +8,8 @@ test('t returns the string for the language', () => {
 });
 
 test('t fills {name} placeholders', () => {
-  assert.equal(t('fr', 'from', { name: 'Fatou' }), 'de la part de Fatou');
-  assert.equal(t('en', 'from', { name: 'Fatou' }), 'from Fatou');
+  assert.equal(t('fr', 'by', { name: 'Fatou' }), 'par Fatou');
+  assert.equal(t('en', 'by', { name: 'Fatou' }), 'by Fatou');
 });
 
 test('toggle label names the other language', () => {

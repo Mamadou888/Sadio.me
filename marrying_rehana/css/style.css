@@ -146,7 +146,10 @@ body {
 
 .load-error { grid-column: 1 / -1; text-align: center; color: var(--muted); }
 
-.is-gifted img { filter: grayscale(1); }
+/* Gifted: the card reads as "taken" but the photo keeps its colors. */
+.gift-card.is-gifted { background: #ECEAE6; box-shadow: none; }
+.is-gifted img { opacity: .55; }
+.is-gifted .gift-title, .is-gifted .gift-desc, .is-gifted .gift-price { color: #A39D97; }
 .gifted-label { font-weight: 600; margin: 0; }
 .gifted-from { margin: 4px 0 0; color: var(--muted); }
 .gifted-note {
