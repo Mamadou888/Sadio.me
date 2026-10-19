@@ -52,6 +52,10 @@ function sessionToRow(session, giftsByLinkId) {
   };
 }
 
+function hasHeaderRow(values) {
+  return values.length > 0 && values[0][0] === ROW_FIELDS[0];
+}
+
 // Reads by column position (ROW_FIELDS order), so a missing or edited header row can't break it.
 function rowsFromValues(values) {
   return values
@@ -96,5 +100,5 @@ function buildThankYouEmail(templates, row, gift) {
 }
 
 if (typeof module !== 'undefined') {
-  module.exports = { ROW_FIELDS, rowsFromValues, syncWindowStart, shouldSendThankYou, filterNewSessions, sessionToRow, rowsToPublicStatus, fillTemplate, buildThankYouEmail };
+  module.exports = { ROW_FIELDS, hasHeaderRow, rowsFromValues, syncWindowStart, shouldSendThankYou, filterNewSessions, sessionToRow, rowsToPublicStatus, fillTemplate, buildThankYouEmail };
 }

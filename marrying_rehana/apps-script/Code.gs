@@ -79,10 +79,16 @@ function syncPurchases() {
   }
 }
 
-// Run once from the editor: prepares the sheet and schedules syncPurchases every 5 minutes.
+// Run once from the editor: adds the header row if missing and schedules syncPurchases every 5 minutes.
 function installTrigger() {
   const sheet = getSheet_();
-  if (sheet.getLastRow() === 0) sheet.appendRow(ROW_FIELDS);
+  if (sheet.getLastRow() === 0) {
+    sheet.appendRow(ROW_FIELDS);
+  } else if (!hasHeaderRow(sheet.getRange(1, 1, 1, ROW_FIELDS.length).getValues())) {
+    sheet.insertRowBefore(1);
+    sheet.getRange(1, 1, 1, ROW_FIELDS.length).setValues([ROW_FIELDS]).setFontWeight('bold');
+    sheet.setFrozenRows(1);
+  }
   sheet.getRange('A:A').setNumberFormat('@'); // keep timestamps as ISO text
   ScriptApp.getProjectTriggers()
     .filter(t => t.getHandlerFunction() === 'syncPurchases')

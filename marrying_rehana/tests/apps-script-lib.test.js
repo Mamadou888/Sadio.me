@@ -155,3 +155,10 @@ test('rowsFromValues turns Sheets dates back into ISO strings', () => {
 test('rowsToPublicStatus ignores rows without a gift id', () => {
   assert.deepEqual(rowsToPublicStatus([row({ gift_id: undefined }), row({ gift_id: '' })]), { gifted: {} });
 });
+
+test('hasHeaderRow is true only when row 1 is the ROW_FIELDS header', () => {
+  const { hasHeaderRow } = require('../apps-script/Lib.js');
+  assert.equal(hasHeaderRow([ROW_FIELDS, ['2027-01-01', 'a']]), true);
+  assert.equal(hasHeaderRow([['2027-01-01', 'a']]), false);
+  assert.equal(hasHeaderRow([]), false);
+});
