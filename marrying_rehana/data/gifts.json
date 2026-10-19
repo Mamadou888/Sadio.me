@@ -160,6 +160,26 @@
     "paymentLinkId": "plink_1US5nGGrjWM1Ogev3PXVA6p5"
   },
   {
+    "id": "cartagena-cooking-class",
+    "priceUsd": 75,
+    "image": "images/gifts/cartagena-cooking-class.jpg",
+    "credit": {
+      "name": "PapiPijuan",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Comida_de_la_Playa_de_Santa_Ver%C3%B3nica.jpg"
+    },
+    "title": {
+      "en": "A cooking class for two in Cartagena, Colombia",
+      "fr": "Un cours de cuisine à deux à Carthagène, en Colombie"
+    },
+    "description": {
+      "en": "A cooking class for two in Cartagena, learning to make arepas, empanadas, patacones, coconut rice and the traditional Caribbean fried fish. Then we eat everything we made. We'll be cooking it for you when you visit.",
+      "fr": "Un cours de cuisine à deux à Carthagène pour apprendre à préparer des arepas, des empanadas, des patacones, du riz au coco et le poisson frit traditionnel des Caraïbes. Ensuite, on mange tout ce qu'on a préparé. On vous en cuisinera quand vous viendrez nous voir."
+    },
+    "paymentLink": "https://buy.stripe.com/test_28EeVdafA6Vt7us3b44sE0o",
+    "paymentLinkId": "plink_1US7NGGrjWM1Ogevlq2lqKAP"
+  },
+  {
     "id": "indonesia-treehouse",
     "priceUsd": 80,
     "image": "images/gifts/indonesia-treehouse.jpg",

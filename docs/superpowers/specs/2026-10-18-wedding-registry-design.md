@@ -54,6 +54,7 @@ Prices in USD. `id` is the stable key used everywhere. Image = Unsplash search t
 | `new-orleans-mardi-gras` | 50 | A Cajun feast at Mardi Gras in New Orleans | Un festin cajun à Mardi Gras à La Nouvelle-Orléans | Bourbon Street, Mardi Gras |
 | `petra-quad-bike` | 70 | Quad biking in the desert near Petra, Jordan | Du quad dans le désert près de Pétra, en Jordanie | jordan desert quad / wadi rum |
 | `kazakhstan-horseback` | 95 | Horseback riding for two in Kazakhstan | Balade à cheval à deux au Kazakhstan | kazakhstan horses mountains |
+| `cartagena-cooking-class` | 75 | A cooking class for two in Cartagena, Colombia | Un cours de cuisine à deux à Carthagène, en Colombie | Caribbean fried fish, coconut rice, patacones |
 | `indonesia-treehouse` | 80 | A bamboo treehouse on a small Indonesian island | Une cabane en bambou sur une petite île indonésienne | bamboo treehouse bali / nusa penida |
 | `grand-canyon-fuel` | 100 | Fuel for a Grand Canyon road trip | Le plein pour un road trip au Grand Canyon | grand canyon road |
 | `iceland-car-rental` | 150 | A rental car to chase the northern lights in Iceland | Une voiture pour chasser les aurores boréales en Islande | iceland northern lights road |
@@ -80,6 +81,7 @@ Prices in USD. `id` is the stable key used everywhere. Image = Unsplash search t
 | `new-orleans-mardi-gras` | Mobilus In Mobili | CC BY-SA 2.0 | https://commons.wikimedia.org/wiki/File:Mardi_Gras_Mounted_Patrol_-_Bourbon_Street_New_Orleans_2023.jpg |
 | `petra-quad-bike` | Peter Chisholm | CC0 | https://commons.wikimedia.org/wiki/File:Wadi_rum_desert.jpg |
 | `kazakhstan-horseback` | Ken and Nyetta | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Horses_Grazing_on_the_Kazakhstani_Steppe_(7131707195).jpg |
+| `cartagena-cooking-class` | PapiPijuan | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Comida_de_la_Playa_de_Santa_Ver%C3%B3nica.jpg |
 | `indonesia-treehouse` | Dini Rosyadah Tridya | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Amazing_Tree_House_at_Nusa_Penida.jpg |
 | `grand-canyon-fuel` | Dietmar Rabich | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Grand_Canyon_(Arizona,_USA),_South_Rim_nahe_Tusayan_--_2012_--_6040.jpg |
 | `iceland-car-rental` | Moyan Brenn | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Aurora_borealis_(13687618934).jpg |
@@ -130,6 +132,10 @@ FR : Du quad à travers le désert rouge autour de Pétra, en Jordanie. Mamadou 
 **kazakhstan-horseback**
 EN: Horseback riding for two through the open steppe and mountain valleys of Kazakhstan. Just us, two horses, endless sky and no phone signal. A day to slow down and be in nature together.
 FR : Une balade à cheval à deux à travers la steppe et les vallées de montagne du Kazakhstan. Juste nous, deux chevaux, un ciel immense et pas de réseau. Une journée pour ralentir et profiter de la nature ensemble.
+
+**cartagena-cooking-class**
+EN: A cooking class for two in Cartagena, learning to make arepas, empanadas, patacones, coconut rice and the traditional Caribbean fried fish. Then we eat everything we made. We'll be cooking it for you when you visit.
+FR : Un cours de cuisine à deux à Carthagène pour apprendre à préparer des arepas, des empanadas, des patacones, du riz au coco et le poisson frit traditionnel des Caraïbes. Ensuite, on mange tout ce qu'on a préparé. On vous en cuisinera quand vous viendrez nous voir.
 
 **indonesia-treehouse**
 EN: A stay in a bamboo treehouse on a small Indonesian island. We'll wake up to the jungle, explore the island by scooter and fall asleep to the sound of the waves. Tarzan and Jane, but make it a honeymoon.
