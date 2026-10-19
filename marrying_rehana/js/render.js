@@ -36,6 +36,12 @@ export function renderGrid(gifts, statusMap, lang, rate, order) {
   return sortGifts(gifts, order).map(g => renderGiftCard(g, statusMap[g.id], lang, rate)).join('\n');
 }
 
+// Text only (escaped); app.js puts it in the banner.
+export function renderThanks(gift, lang) {
+  const title = gift?.title?.[lang] ?? gift?.title?.en;
+  return escapeHtml(title ? t(lang, 'thanksFor', { gift: title }) : t(lang, 'thanks'));
+}
+
 export function renderCredits(gifts, lang) {
   const items = gifts.map(g =>
     `<li>${escapeHtml(g.title[lang])} — <a href="${escapeHtml(g.credit.source)}">${escapeHtml(g.credit.name)}</a>, ${escapeHtml(g.credit.license)}</li>`);

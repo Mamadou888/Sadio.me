@@ -81,3 +81,16 @@ test('renderCredits is a collapsed disclosure with the heading as its toggle', (
   assert.ok(!credits.includes('<details open'));
   assert.ok(credits.trimEnd().endsWith('</details>'));
 });
+
+import { renderThanks } from '../js/render.js';
+
+test('renderThanks names the gift that was just bought, escaped, in each language', () => {
+  const coron = gifts.find(g => g.id === 'coron-snorkeling');
+  assert.equal(renderThanks(coron, 'en'), 'Thank you so much for gifting us “Snorkeling in Coron, Philippines”! 🤍 Check your inbox for a little note from us.');
+  assert.ok(renderThanks(coron, 'fr').startsWith('Merci infiniment de nous avoir offert « Du snorkeling à Coron, aux Philippines » !'));
+  assert.ok(renderThanks({ title: { en: '<b>x</b>' } }, 'en').includes('&lt;b&gt;x&lt;/b&gt;'));
+});
+
+test('renderThanks falls back to the general thank-you for an unknown gift', () => {
+  assert.equal(renderThanks(undefined, 'en'), 'Thank you so much! 🤍 Check your inbox for a little note from us.');
+});
