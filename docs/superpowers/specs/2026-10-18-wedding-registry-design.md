@@ -61,8 +61,10 @@ Prices in USD. `id` is the stable key used everywhere. `marrying_rehana/data/gif
 | `disneyland` | 110 | Rehana's ticket to Disneyland | Le billet de Rehana pour Disneyland |
 | `iceland-car-rental` | 150 | A rental car to chase the northern lights in Iceland | Une voiture pour chasser les aurores boréales en Islande |
 | `kazakhstan-horseback` | 165 | Horseback riding for two in Kazakhstan | Balade à cheval à deux au Kazakhstan |
+| `maido-lima` | 175 | Dinner for two at Maido in Lima, Peru | Un dîner à deux chez Maido à Lima, au Pérou |
 | `guinea-radisson` | 180 | 2 nights at the Radisson Blu in Conakry, Guinea | 2 nuits au Radisson Blu de Conakry, en Guinée |
 | `tahiti-dolphins` | 200 | Swimming with dolphins in Tahiti | Nager avec les dauphins à Tahiti |
+| `coron-snorkeling` | 225 | Snorkeling in Coron, Philippines | Du snorkeling à Coron, aux Philippines |
 | `anjouan-comoros` | 250 | 3 nights on Anjouan, Comoros | 3 nuits à Anjouan, aux Comores |
 | `nyc-helicopter` | 300 | A helicopter ride over New York City | Un tour en hélicoptère au-dessus de New York |
 | `uganda-gorillas` | 400 | A gorilla trekking ticket in Uganda | Un ticket pour aller voir les gorilles en Ouganda |
@@ -90,8 +92,10 @@ Prices in USD. `id` is the stable key used everywhere. `marrying_rehana/data/gif
 | `disneyland` | Tuxyso | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Sleeping_Beauty_Castle_Disneyland_Anaheim_2013.jpg |
 | `iceland-car-rental` | Moyan Brenn | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Aurora_borealis_(13687618934).jpg |
 | `kazakhstan-horseback` | Ken and Nyetta | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Horses_Grazing_on_the_Kazakhstani_Steppe_(7131707195).jpg |
+| `maido-lima` | Lindblom | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Maido,_Lima_-_8210534816.jpg |
 | `guinea-radisson` | Alpha hmd | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Un_aper%C3%A7u_de_la_ville_de_conakry.jpg |
 | `tahiti-dolphins` | Dan Harville | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Spinner_Dolphin,_%C3%8Eles_du_Vent,_French_Polynesia_imported_from_iNaturalist_photo_251470527.jpg |
+| `coron-snorkeling` | Mmlibranda | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Kayangan_Lake_in_Coron,_Palawan.jpg |
 | `anjouan-comoros` | Haryamouji | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Anjouan_-_Islands_of_Comoros.jpg |
 | `nyc-helicopter` | nosha | CC BY-SA 2.0 | https://commons.wikimedia.org/wiki/File:Lower_Manhattan_from_Helicopter.jpg |
 | `uganda-gorillas` | Charles J. Sharp | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Mountain_gorilla_(Gorilla_beringei_beringei)_female_eating_root.jpg |
@@ -165,6 +169,10 @@ FR : Une voiture de location pour sillonner l'Islande en hiver. On chassera les 
 EN: Horseback riding for two through the open steppe and mountain valleys of Kazakhstan. Just us, two horses, endless sky and no phone signal. A day to slow down and be in nature together.
 FR : Une balade à cheval à deux à travers la steppe et les vallées de montagne du Kazakhstan. Juste nous, deux chevaux, un ciel immense et pas de réseau. Une journée pour ralentir et profiter de la nature ensemble.
 
+**maido-lima**
+EN: A meal for two at Maido in Lima, named the best restaurant in the world: Japanese-Peruvian fusion, excellent ceviche and the freshest seafood. We'll pretend we eat like this all the time.
+FR : Un repas à deux chez Maido à Lima, élu meilleur restaurant du monde : une fusion japonaise et péruvienne, un ceviche exceptionnel et des fruits de mer ultra frais. On fera comme si on mangeait comme ça tous les jours.
+
 **guinea-radisson**
 EN: Two nights at the Radisson Blu in Conakry, in Mamadou's homeland of Guinea. This will specifically be for when we want to take a break from staying with all the aunties and uncles we love so much. And for Rehana to discover Fulani culture.
 FR : Deux nuits au Radisson Blu de Conakry, en Guinée, le pays d'origine de Mamadou. Ce sera spécialement pour quand on voudra souffler un peu entre deux séjours chez toutes les tatas et tontons qu'on aime tant. Et pour que Rehana découvre la culture peule.
@@ -172,6 +180,10 @@ FR : Deux nuits au Radisson Blu de Conakry, en Guinée, le pays d'origine de Mam
 **tahiti-dolphins**
 EN: Swimming with wild dolphins in the warm blue Pacific off Tahiti. The kind of story we'll be telling our grandkids about. Hopefully we don't get kidnapped by dolphins.
 FR : Nager avec des dauphins sauvages dans les eaux chaudes et bleues du Pacifique, au large de Tahiti. Le genre d'histoire qu'on racontera à nos petits-enfants. En espérant ne pas se faire kidnapper par les dauphins.
+
+**coron-snorkeling**
+EN: Snorkeling through the turquoise lagoons and coral reefs of Coron, Palawan, in the Philippines. Your gift makes sure we each get two life vests, since neither of us can even swim that well.
+FR : Du snorkeling dans les lagons turquoise et les récifs de corail de Coron, à Palawan, aux Philippines. Votre cadeau nous garantit deux gilets de sauvetage chacun, puisqu'aucun de nous deux ne sait vraiment bien nager.
 
 **anjouan-comoros**
 EN: Three nights on Anjouan, the small island in the Comoros where Rehana's family is from. Volcanic hills, clove and ylang-ylang in the air, and family who will make sure Mamadou never goes hungry. A trip back to Rehana's roots, together.

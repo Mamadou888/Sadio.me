@@ -320,6 +320,26 @@
     "paymentLinkId": "plink_1US80kGrjWM1Ogevo1v3EgJH"
   },
   {
+    "id": "maido-lima",
+    "priceUsd": 175,
+    "image": "images/gifts/maido-lima.jpg",
+    "credit": {
+      "name": "Lindblom",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Maido,_Lima_-_8210534816.jpg"
+    },
+    "title": {
+      "en": "Dinner for two at Maido in Lima, Peru",
+      "fr": "Un dîner à deux chez Maido à Lima, au Pérou"
+    },
+    "description": {
+      "en": "A meal for two at Maido in Lima, named the best restaurant in the world: Japanese-Peruvian fusion, excellent ceviche and the freshest seafood. We'll pretend we eat like this all the time.",
+      "fr": "Un repas à deux chez Maido à Lima, élu meilleur restaurant du monde : une fusion japonaise et péruvienne, un ceviche exceptionnel et des fruits de mer ultra frais. On fera comme si on mangeait comme ça tous les jours."
+    },
+    "paymentLink": "https://buy.stripe.com/test_14AeVd1J41B9dSQbHA4sE0t",
+    "paymentLinkId": "plink_1USGHIGrjWM1OgevZkdQRxs4"
+  },
+  {
     "id": "guinea-radisson",
     "priceUsd": 180,
     "image": "images/gifts/guinea-radisson.jpg",
@@ -358,6 +378,26 @@
     },
     "paymentLink": "https://buy.stripe.com/test_9B68wPbjE4Nl3ec7rk4sE08",
     "paymentLinkId": "plink_1US5nOGrjWM1OgevV2EjxHJE"
+  },
+  {
+    "id": "coron-snorkeling",
+    "priceUsd": 225,
+    "image": "images/gifts/coron-snorkeling.jpg",
+    "credit": {
+      "name": "Mmlibranda",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Kayangan_Lake_in_Coron,_Palawan.jpg"
+    },
+    "title": {
+      "en": "Snorkeling in Coron, Philippines",
+      "fr": "Du snorkeling à Coron, aux Philippines"
+    },
+    "description": {
+      "en": "Snorkeling through the turquoise lagoons and coral reefs of Coron, Palawan, in the Philippines. Your gift makes sure we each get two life vests, since neither of us can even swim that well.",
+      "fr": "Du snorkeling dans les lagons turquoise et les récifs de corail de Coron, à Palawan, aux Philippines. Votre cadeau nous garantit deux gilets de sauvetage chacun, puisqu'aucun de nous deux ne sait vraiment bien nager."
+    },
+    "paymentLink": "https://buy.stripe.com/test_8x2cN5bjEdjRaGE8vo4sE0u",
+    "paymentLinkId": "plink_1USGHJGrjWM1OgevZYe9KsHf"
   },
   {
     "id": "anjouan-comoros",
