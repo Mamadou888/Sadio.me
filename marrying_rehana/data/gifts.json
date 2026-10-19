@@ -20,6 +20,26 @@
     "paymentLinkId": "plink_1US7IdGrjWM1OgevhwQDpx4C"
   },
   {
+    "id": "nyc-chopped-cheese",
+    "priceUsd": 5.5,
+    "image": "images/gifts/nyc-chopped-cheese.jpg",
+    "credit": {
+      "name": "Logimancer",
+      "license": "CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Chopped_cheese_Crotona_Bronx.jpg"
+    },
+    "title": {
+      "en": "Rehana's first chopped cheese in NYC",
+      "fr": "Le premier « chopped cheese » de Rehana à New York"
+    },
+    "description": {
+      "en": "Rehana's very first chopped cheese from a real New York bodega: chopped beef, melted cheese, lettuce and tomato on a hero, wrapped in foil and eaten on the walk home. Her official New Yorker initiation.",
+      "fr": "Le tout premier « chopped cheese » de Rehana, acheté dans une vraie bodega new-yorkaise : du bœuf haché, du fromage fondu, de la salade et de la tomate dans un sandwich, emballé dans du papier alu et mangé sur le chemin du retour. Son initiation officielle de New-Yorkaise."
+    },
+    "paymentLink": "https://buy.stripe.com/test_cNi3cv2N8gw37useTM4sE0p",
+    "paymentLinkId": "plink_1US7ORGrjWM1OgevNMVaJzvl"
+  },
+  {
     "id": "thailand-mango-sticky-rice",
     "priceUsd": 10,
     "image": "images/gifts/thailand-mango-sticky-rice.jpg",

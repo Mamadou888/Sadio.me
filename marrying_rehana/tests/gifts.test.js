@@ -7,7 +7,7 @@ const gifts = JSON.parse(fs.readFileSync(new URL('../data/gifts.json', import.me
 const ids = list => list.map(g => g.id);
 
 test('sortGifts asc puts cheapest first', () => {
-  assert.deepEqual(ids(sortGifts(gifts, 'asc')).slice(0, 2), ['nyc-dollar-slice', 'thailand-mango-sticky-rice']);
+  assert.deepEqual(ids(sortGifts(gifts, 'asc')).slice(0, 2), ['nyc-dollar-slice', 'nyc-chopped-cheese']);
   assert.equal(sortGifts(gifts, 'asc').at(-1).id, 'serengeti-four-seasons');
 });
 

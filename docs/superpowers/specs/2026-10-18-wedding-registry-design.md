@@ -46,6 +46,7 @@ Prices in USD. `id` is the stable key used everywhere. Image = Unsplash search t
 | id | USD | Title (EN) | Title (FR) | Photo subject |
 |---|---|---|---|---|
 | `nyc-dollar-slice` | 1.5 | Rehana's first dollar slice in NYC | La première « dollar slice » de Rehana à New York | New York pizza slices |
+| `nyc-chopped-cheese` | 5.5 | Rehana's first chopped cheese in NYC | Le premier « chopped cheese » de Rehana à New York | Chopped cheese, Crotona, Bronx |
 | `thailand-mango-sticky-rice` | 10 | Mango sticky rice on a beach in Thailand | Du riz gluant à la mangue sur une plage en Thaïlande | mango sticky rice |
 | `rio-carnival-beach` | 20 | A beach day in Rio during Carnival | Une journée à la plage à Rio pendant le carnaval | copacabana beach rio |
 | `vietnam-homestay` | 35 | 3 nights at a homestay in northern Vietnam | 3 nuits chez l'habitant dans le nord du Vietnam | sapa rice terraces village |
@@ -73,6 +74,7 @@ Prices in USD. `id` is the stable key used everywhere. Image = Unsplash search t
 | id | Credit (shown on site) | License | Source |
 |---|---|---|---|
 | `nyc-dollar-slice` | Contributorwiki12 | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:New_York_Pizza_Slices.png |
+| `nyc-chopped-cheese` | Logimancer | CC BY 4.0 | https://commons.wikimedia.org/wiki/File:Chopped_cheese_Crotona_Bronx.jpg |
 | `thailand-mango-sticky-rice` | Dennis Wong | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Mango_sticy_rice_(3859549574).jpg |
 | `rio-carnival-beach` | bisonlux | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Praia_de_Copacabana_-_Rio_de_Janeiro,_Brasil.jpg |
 | `vietnam-homestay` | Alphab.fr | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Rice_fields_near_Sapa,_Vi%C3%AAt_Nam.jpg |
@@ -100,6 +102,10 @@ Prices in USD. `id` is the stable key used everywhere. Image = Unsplash search t
 **nyc-dollar-slice**
 EN: Rehana's very first New York dollar slice: folded in half and eaten standing up on the sidewalk, like a real New Yorker. Unfortunately, it ain't a dollar no more.
 FR : La toute première « dollar slice » new-yorkaise de Rehana : pliée en deux et mangée debout sur le trottoir, comme une vraie New-Yorkaise. Malheureusement, ça ne coûte plus un dollar.
+
+**nyc-chopped-cheese**
+EN: Rehana's very first chopped cheese from a real New York bodega: chopped beef, melted cheese, lettuce and tomato on a hero, wrapped in foil and eaten on the walk home. Her official New Yorker initiation.
+FR : Le tout premier « chopped cheese » de Rehana, acheté dans une vraie bodega new-yorkaise : du bœuf haché, du fromage fondu, de la salade et de la tomate dans un sandwich, emballé dans du papier alu et mangé sur le chemin du retour. Son initiation officielle de New-Yorkaise.
 
 **thailand-mango-sticky-rice**
 EN: A plate of mango sticky rice on a Thai beach, toes in the sand as the sun goes down. Sweet mango, warm coconut rice, and the two of us fighting over the last bite.
