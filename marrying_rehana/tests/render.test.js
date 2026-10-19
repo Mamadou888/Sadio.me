@@ -74,3 +74,10 @@ test('renderCredits lists each photographer, license and linked source', () => {
   assert.ok(credits.includes(`href="${escapeHtml(canyon.credit.source)}"`));
   assert.ok(renderCredits(gifts, 'fr').includes('Crédits photo'));
 });
+
+test('renderCredits is a collapsed disclosure with the heading as its toggle', () => {
+  const credits = renderCredits(gifts, 'en');
+  assert.match(credits, /^<details class="credits-toggle"><summary>Photo credits<\/summary>/);
+  assert.ok(!credits.includes('<details open'));
+  assert.ok(credits.trimEnd().endsWith('</details>'));
+});

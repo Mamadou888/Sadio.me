@@ -39,5 +39,5 @@ export function renderGrid(gifts, statusMap, lang, rate, order) {
 export function renderCredits(gifts, lang) {
   const items = gifts.map(g =>
     `<li>${escapeHtml(g.title[lang])} — <a href="${escapeHtml(g.credit.source)}">${escapeHtml(g.credit.name)}</a>, ${escapeHtml(g.credit.license)}</li>`);
-  return `<h4>${escapeHtml(t(lang, 'photoCredits'))}</h4><ul>${items.join('')}</ul>`;
+  return `<details class="credits-toggle"><summary>${escapeHtml(t(lang, 'photoCredits'))}</summary><ul>${items.join('')}</ul></details>`;
 }

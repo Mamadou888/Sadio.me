@@ -143,8 +143,14 @@ body {
   color: #999;
   font-size: 12px;
 }
-.credits h4 { margin: 0 0 6px; font-weight: 600; }
-.credits ul { margin: 0; padding: 0; list-style: none; }
+.credits-toggle { text-align: center; }
+.credits-toggle summary { cursor: pointer; display: inline-block; font-weight: 600; padding: 4px 8px; }
+.credits-toggle summary:hover { color: var(--text); }
+.credits-toggle summary::-webkit-details-marker { display: none; }
+.credits-toggle summary::after { content: ' ▾'; }
+.credits-toggle[open] summary::after { content: ' ▴'; }
+.credits ul { margin: 8px 0 0; padding: 0; list-style: none; text-align: left; columns: 2 320px; column-gap: 32px; }
+.credits li { break-inside: avoid; margin-bottom: 2px; }
 .credits a { color: inherit; }
 
 @media (max-width: 1099px) { .grid { grid-template-columns: repeat(3, 1fr); } }
