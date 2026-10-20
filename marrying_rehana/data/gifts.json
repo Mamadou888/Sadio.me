@@ -80,6 +80,26 @@
     "paymentLinkId": "plink_1USS6yGrjWM1OgevvnEX3hkp"
   },
   {
+    "id": "paris-cafe-people-watching",
+    "priceUsd": 30,
+    "image": "images/gifts/paris-cafe-people-watching.jpg",
+    "credit": {
+      "name": "Roboppy",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Lesdeuxmagots.jpg"
+    },
+    "title": {
+      "en": "People watching at a café in Paris",
+      "fr": "Regarder les passants à une terrasse parisienne"
+    },
+    "description": {
+      "en": "Teaching Mamadou how to people watch, for no reason at all, while eating a croissant and sipping an espresso at a café in the 6th arrondissement of Paris. Your gift covers the croissants, the espressos and however long it takes him to get it.",
+      "fr": "Apprendre à Mamadou à regarder les passants, sans aucune raison, en mangeant un croissant et en sirotant un espresso à une terrasse du 6e arrondissement de Paris. Votre cadeau couvre les croissants, les espressos et le temps qu'il lui faudra pour comprendre."
+    },
+    "paymentLink": "https://buy.stripe.com/eVq6oH9bwcfN164fXQ4sE0q",
+    "paymentLinkId": "plink_1USSQ9GrjWM1OgevWVhjWSgV"
+  },
+  {
     "id": "vietnam-homestay",
     "priceUsd": 35,
     "image": "images/gifts/vietnam-homestay.jpg",
@@ -158,6 +178,26 @@
     },
     "paymentLink": "https://buy.stripe.com/bJe6oHbjE6Vt8yw12W4sE07",
     "paymentLinkId": "plink_1USS74GrjWM1OgevszRWzuGl"
+  },
+  {
+    "id": "paris-escargot",
+    "priceUsd": 60,
+    "image": "images/gifts/paris-escargot.jpg",
+    "credit": {
+      "name": "eatingeast",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Escargot_%C3%A0_la_Bourguignonne_-_eatingeast.jpg"
+    },
+    "title": {
+      "en": "Mamadou eating escargot in Paris",
+      "fr": "Mamadou qui mange des escargots à Paris"
+    },
+    "description": {
+      "en": "Mamadou eating escargot. We all know he won't like it, but he has to indoctrinate himself in the way of \"Liberté, Égalité, Fraternité\". Your gift covers a plate of escargots à la bourguignonne, plus the bread to wash the taste away.",
+      "fr": "Mamadou qui mange des escargots. On sait tous qu'il ne va pas aimer, mais il doit s'imprégner de l'esprit « Liberté, Égalité, Fraternité ». Votre cadeau couvre une assiette d'escargots à la bourguignonne, et le pain pour faire passer le goût."
+    },
+    "paymentLink": "https://buy.stripe.com/dRm9AT5Zk1B97usfXQ4sE0r",
+    "paymentLinkId": "plink_1USSQAGrjWM1Ogev3oiyIO9C"
   },
   {
     "id": "petra-quad-bike",

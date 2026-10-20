@@ -7,35 +7,46 @@ const SHEET_NAME = 'Purchases';
 const SENDER_NAME = 'Mamadou & Rehana';
 const REPLY_TO = 'mamadou888@gmail.com';
 
+// Our photo at the top of the thank-you email.
+const EMAIL_IMAGE_URL = 'https://sadio.me/marrying_rehana/images/email-couple.jpg';
+
 // Edit the thank-you emails here. {{name}} and {{gift}} are filled in for you.
+// Each paragraph is its own entry; the email adds the spacing.
 const EMAIL_TEMPLATES = {
   en: {
     subject: 'Thank you for your gift 🤍',
-    body: [
-      'Hi {{name}},',
-      '',
-      'Thank you so much for gifting us "{{gift}}". It truly means the world to us.',
-      "When we finally do it, we'll send you a message and a photo from wherever we are.",
-      '',
-      'With love,',
-      'Mamadou & Rehana',
-    ].join('\n'),
+    greeting: 'Hi {{name}} 👋',
+    paragraphs: [
+      'Thank you so much for gifting us "{{gift}}"\u00a0🎁', // \u00a0 keeps 🎁 on the same line as the gift
+      'It truly means the world to us. We are extremely grateful.',
+      "When we finally do it, we'll send you a message and a photo from wherever we are 📸🌍",
+    ],
+    closing: 'Let the adventures begin ✈️🥳',
+    signoff: 'With love,',
+    signature: 'Mamadou & Rehana 🤍',
     fallbackName: 'friend',
   },
   fr: {
     subject: 'Merci pour votre cadeau 🤍',
-    body: [
-      'Bonjour {{name}},',
-      '',
-      'Merci infiniment de nous avoir offert « {{gift}} ». Cela nous touche énormément.',
-      'Le jour venu, nous vous enverrons un message et une photo, où que nous soyons.',
-      '',
-      'Avec tout notre amour,',
-      'Mamadou & Rehana',
-    ].join('\n'),
+    greeting: 'Bonjour {{name}} 👋',
+    paragraphs: [
+      'Merci infiniment de nous avoir offert « {{gift}} »\u00a0🎁',
+      'Cela nous touche énormément. Nous vous sommes extrêmement reconnaissants.',
+      'Le jour venu, nous vous enverrons un message et une photo, où que nous soyons 📸🌍',
+    ],
+    closing: 'Que les aventures commencent ✈️🥳',
+    signoff: 'Avec tout notre amour,',
+    signature: 'Mamadou & Rehana 🤍',
     fallbackName: 'à vous',
   },
 };
+
+// Run from the editor to see the thank-you email in your own inbox. Nothing is written to the sheet.
+function sendTestThankYou() {
+  const row = { display_name: 'Mamadou', locale: 'en', gift_title: 'A test gift' };
+  const email = buildThankYouEmail(EMAIL_TEMPLATES, row, undefined, EMAIL_IMAGE_URL);
+  MailApp.sendEmail({ to: REPLY_TO, subject: email.subject, body: email.body, htmlBody: email.htmlBody, name: SENDER_NAME });
+}
 
 // Public endpoint the registry page reads: which gifts are taken, plus the name/note guests chose to show.
 function doGet() {
@@ -64,8 +75,8 @@ function syncPurchases() {
       const rowNumber = appendRow_(row);
       if (shouldSendThankYou(row)) {
         try {
-          const email = buildThankYouEmail(EMAIL_TEMPLATES, row, giftsById[row.gift_id]);
-          MailApp.sendEmail({ to: row.guest_email, subject: email.subject, body: email.body, name: SENDER_NAME, replyTo: REPLY_TO });
+          const email = buildThankYouEmail(EMAIL_TEMPLATES, row, giftsById[row.gift_id], EMAIL_IMAGE_URL);
+          MailApp.sendEmail({ to: row.guest_email, subject: email.subject, body: email.body, htmlBody: email.htmlBody, name: SENDER_NAME, replyTo: REPLY_TO });
           getSheet_().getRange(rowNumber, ROW_FIELDS.indexOf('thank_you_sent') + 1).setValue(true);
         } catch (err) {
           console.error('Thank-you email failed for ' + row.session_id + ': ' + err);

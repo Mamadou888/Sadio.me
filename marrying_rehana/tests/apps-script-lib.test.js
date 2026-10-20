@@ -106,22 +106,44 @@ test('fillTemplate replaces {{key}} placeholders', () => {
 });
 
 const tpl = {
-  en: { subject: 'Thanks', body: 'Hi {{name}}, {{gift}}', fallbackName: 'friend' },
-  fr: { subject: 'Merci', body: 'Bonjour {{name}}, {{gift}}', fallbackName: 'à vous' },
+  en: { subject: 'Thanks', greeting: 'Hi {{name}}', paragraphs: ['You gave "{{gift}}".', 'Photos soon.'],
+    closing: 'Adventures!', signoff: 'Love,', signature: 'M & R', fallbackName: 'friend' },
+  fr: { subject: 'Merci', greeting: 'Bonjour {{name}}', paragraphs: ['Vous avez offert « {{gift}} ».'],
+    closing: 'Aventures !', signoff: 'Bises,', signature: 'M & R', fallbackName: 'à vous' },
 };
 
+test('buildThankYouEmail lays out the plain-text body with blank lines between sections', () => {
+  assert.equal(buildThankYouEmail(tpl, row({ display_name: 'Fatou' }), iceland).body,
+    `Hi Fatou\n\nYou gave "${iceland.title.en}".\n\nPhotos soon.\n\nAdventures!\n\nLove,\nM & R`);
+});
+
 test('buildThankYouEmail uses French for fr locales and the fallback name', () => {
-  assert.deepEqual(buildThankYouEmail(tpl, row({ locale: 'fr-FR' }), iceland),
-    { subject: 'Merci', body: `Bonjour à vous, ${iceland.title.fr}` });
+  const email = buildThankYouEmail(tpl, row({ locale: 'fr-FR' }), iceland);
+  assert.equal(email.subject, 'Merci');
+  assert.ok(email.body.startsWith(`Bonjour à vous\n\nVous avez offert « ${iceland.title.fr} ».`));
 });
 
 test('buildThankYouEmail prefers display name, then cardholder name', () => {
-  assert.equal(buildThankYouEmail(tpl, row({ locale: 'auto', checkout_name: 'Sam Lee' }), iceland).body, `Hi Sam Lee, ${iceland.title.en}`);
-  assert.equal(buildThankYouEmail(tpl, row({ display_name: 'Fatou', checkout_name: 'Sam Lee' }), iceland).body, `Hi Fatou, ${iceland.title.en}`);
+  assert.ok(buildThankYouEmail(tpl, row({ locale: 'auto', checkout_name: 'Sam Lee' }), iceland).body.startsWith('Hi Sam Lee\n'));
+  assert.ok(buildThankYouEmail(tpl, row({ display_name: 'Fatou', checkout_name: 'Sam Lee' }), iceland).body.startsWith('Hi Fatou\n'));
 });
 
 test('buildThankYouEmail falls back to the row title for unknown gifts', () => {
-  assert.equal(buildThankYouEmail(tpl, row({ gift_title: 'Mystery' }), undefined).body, 'Hi friend, Mystery');
+  assert.ok(buildThankYouEmail(tpl, row({ gift_title: 'Mystery' }), undefined).body.includes('You gave "Mystery".'));
+});
+
+test('buildThankYouEmail htmlBody shows our photo, every section and the gift in bold', () => {
+  const html = buildThankYouEmail(tpl, row({ display_name: 'Fatou' }), iceland, 'https://sadio.me/us.jpg').htmlBody;
+  assert.ok(html.includes('<img src="https://sadio.me/us.jpg"'));
+  for (const text of ['Hi Fatou', 'Photos soon.', 'Adventures!', 'Love,', 'M &amp; R']) assert.ok(html.includes(text), text);
+  assert.ok(html.includes(`<strong>${iceland.title.en}</strong>`));
+});
+
+test('buildThankYouEmail htmlBody escapes what guests typed and skips the photo without a URL', () => {
+  const html = buildThankYouEmail(tpl, row({ display_name: '<b>Sam</b>' }), iceland).htmlBody;
+  assert.ok(html.includes('Hi &lt;b&gt;Sam&lt;/b&gt;'));
+  assert.ok(!html.includes('<b>Sam'));
+  assert.ok(!html.includes('<img'));
 });
 
 test('syncWindowStart looks back 24 hours so late-paid checkouts are not skipped', () => {

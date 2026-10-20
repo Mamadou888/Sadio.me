@@ -49,10 +49,12 @@ Prices in USD. `id` is the stable key used everywhere. `marrying_rehana/data/gif
 | `nyc-chopped-cheese` | 5.5 | Rehana's first chopped cheese in NYC | Le premier « chopped cheese » de Rehana à New York |
 | `thailand-mango-sticky-rice` | 10 | Mango sticky rice on a beach in Thailand | Du riz gluant à la mangue sur une plage en Thaïlande |
 | `rio-carnival-beach` | 20 | A beach day in Rio during Carnival | Une journée à la plage à Rio pendant le carnaval |
+| `paris-cafe-people-watching` | 30 | People watching at a café in Paris | Regarder les passants à une terrasse parisienne |
 | `vietnam-homestay` | 35 | 3 nights at a homestay in northern Vietnam | 3 nuits chez l'habitant dans le nord du Vietnam |
 | `eiffel-tower` | 38 | Climbing the Eiffel Tower for the first time | Monter en haut de la tour Eiffel pour la première fois |
 | `nigeria-entry-fee` | 45 | Our unofficial entry fee into Nigeria | Notre « droit d'entrée » officieux au Nigeria |
 | `new-orleans-mardi-gras` | 50 | A Cajun feast at Mardi Gras in New Orleans | Un festin cajun à Mardi Gras à La Nouvelle-Orléans |
+| `paris-escargot` | 60 | Mamadou eating escargot in Paris | Mamadou qui mange des escargots à Paris |
 | `petra-quad-bike` | 70 | Quad biking in the desert near Petra, Jordan | Du quad dans le désert près de Pétra, en Jordanie |
 | `cartagena-cooking-class` | 75 | A cooking class for two in Cartagena, Colombia | Un cours de cuisine à deux à Carthagène, en Colombie |
 | `indonesia-treehouse` | 80 | A bamboo treehouse on a small Indonesian island | Une cabane en bambou sur une petite île indonésienne |
@@ -121,6 +123,10 @@ FR : Une assiette de riz gluant à la mangue sur une plage thaïlandaise, les pi
 EN: A full day on the sand at Copacabana while Carnival takes over Rio de Janeiro. Fresh juice in hand, samba drifting in from the street, and absolutely nowhere to be. Your gift covers our beach chairs, an umbrella and an embarrassing number of passion fruit juices.
 FR : Une journée entière sur le sable de Copacabana pendant que le carnaval envahit Rio de Janeiro. Un jus frais à la main, la samba qui monte de la rue, et nulle part où aller. Votre cadeau couvre nos transats, le parasol et un nombre gênant de jus de fruit de la passion.
 
+**paris-cafe-people-watching**
+EN: Teaching Mamadou how to people watch, for no reason at all, while eating a croissant and sipping an espresso at a café in the 6th arrondissement of Paris. Your gift covers the croissants, the espressos and however long it takes him to get it.
+FR : Apprendre à Mamadou à regarder les passants, sans aucune raison, en mangeant un croissant et en sirotant un espresso à une terrasse du 6e arrondissement de Paris. Votre cadeau couvre les croissants, les espressos et le temps qu'il lui faudra pour comprendre.
+
 **vietnam-homestay**
 EN: Three nights with a local family in the mountains of northern Vietnam. Rice terraces out the window, home-cooked meals at their table.
 FR : Trois nuits chez une famille dans les montagnes du nord du Vietnam. Des rizières en terrasses par la fenêtre, des repas faits maison à leur table.
@@ -136,6 +142,10 @@ FR : Le pot-de-vin qu'on devra sûrement payer pour entrer au Nigeria sains, sau
 **new-orleans-mardi-gras**
 EN: A big Cajun feast in New Orleans during Mardi Gras: gumbo, crawfish, jambalaya, the works. Then we walk it off chasing parades and catching beads.
 FR : Un grand festin cajun à La Nouvelle-Orléans pendant Mardi Gras : gumbo, écrevisses, jambalaya, tout y passe. Ensuite, on digère en suivant les défilés et en attrapant des colliers.
+
+**paris-escargot**
+EN: Mamadou eating escargot. We all know he won't like it, but he has to indoctrinate himself in the way of "Liberté, Égalité, Fraternité". Your gift covers a plate of escargots à la bourguignonne, plus the bread to wash the taste away.
+FR : Mamadou qui mange des escargots. On sait tous qu'il ne va pas aimer, mais il doit s'imprégner de l'esprit « Liberté, Égalité, Fraternité ». Votre cadeau couvre une assiette d'escargots à la bourguignonne, et le pain pour faire passer le goût.
 
 **petra-quad-bike**
 EN: Quad biking across the red desert around Petra, Jordan. Mamadou is the better driver, so we're only taking one bike ;) Rehana gets the view, Mamadou gets the bragging rights, and we both get covered in sand.
@@ -257,25 +267,38 @@ Inactive-link message: "This gift has already been given. Thank you! 🤍 / Ce c
 
 ## Thank-you email (default text — Mamadou edits it in the script)
 
+Sent as HTML (with a plain-text copy): our photo (`images/email-couple.jpg`) on top, then the sections below
+centered on a white card, the gift name in bold, the closing line larger (Mamadou, 2026-10-19).
+
 EN — Subject: `Thank you for your gift 🤍`
 ```
-Hi {{name}},
+Hi {{name}} 👋
 
-Thank you so much for gifting us "{{gift}}". It truly means the world to us.
-When we finally do it, we'll send you a message and a photo from wherever we are.
+Thank you so much for gifting us "{{gift}}" 🎁
+
+It truly means the world to us. We are extremely grateful.
+
+When we finally do it, we'll send you a message and a photo from wherever we are 📸🌍
+
+Let the adventures begin ✈️🥳
 
 With love,
-Mamadou & Rehana
+Mamadou & Rehana 🤍
 ```
 FR — Subject: `Merci pour votre cadeau 🤍`
 ```
-Bonjour {{name}},
+Bonjour {{name}} 👋
 
-Merci infiniment de nous avoir offert « {{gift}} ». Cela nous touche énormément.
-Le jour venu, nous vous enverrons un message et une photo, où que nous soyons.
+Merci infiniment de nous avoir offert « {{gift}} » 🎁
+
+Cela nous touche énormément. Nous vous sommes extrêmement reconnaissants.
+
+Le jour venu, nous vous enverrons un message et une photo, où que nous soyons 📸🌍
+
+Que les aventures commencent ✈️🥳
 
 Avec tout notre amour,
-Mamadou & Rehana
+Mamadou & Rehana 🤍
 ```
 `{{name}}` = name entered at checkout, else the cardholder name, else "friend" / "à vous".
 

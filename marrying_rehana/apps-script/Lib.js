@@ -89,14 +89,40 @@ function fillTemplate(str, vars) {
   return str.replace(/\{\{(\w+)\}\}/g, (_, k) => (vars[k] == null ? '' : vars[k]));
 }
 
-function buildThankYouEmail(templates, row, gift) {
+function escapeEmailHtml_(str) {
+  return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
+
+// Returns a plain-text body plus an HTML version: our photo on top, then the template's sections.
+function buildThankYouEmail(templates, row, gift, imageUrl) {
   const lang = String(row.locale || '').indexOf('fr') === 0 ? 'fr' : 'en';
   const tpl = templates[lang];
   const vars = {
     name: row.display_name || row.checkout_name || tpl.fallbackName,
     gift: (gift && gift.title[lang]) || row.gift_title,
   };
-  return { subject: fillTemplate(tpl.subject, vars), body: fillTemplate(tpl.body, vars) };
+  const text = s => fillTemplate(s, vars);
+  const html = s => fillTemplate(escapeEmailHtml_(s), {
+    name: escapeEmailHtml_(vars.name),
+    gift: '<strong>' + escapeEmailHtml_(vars.gift) + '</strong>',
+  });
+
+  const body = [text(tpl.greeting)].concat(tpl.paragraphs.map(text), [text(tpl.closing), text(tpl.signoff) + '\n' + text(tpl.signature)])
+    .join('\n\n');
+
+  const p = 'margin:0 0 18px;font-size:16px;line-height:1.6;color:#333;';
+  const htmlBody = [
+    '<div style="background:#FBFAF7;padding:32px 16px;font-family:Helvetica,Arial,sans-serif;">',
+    '<div style="max-width:520px;margin:0 auto;background:#fff;border-radius:14px;padding:32px 28px;text-align:center;">',
+    imageUrl ? '<img src="' + escapeEmailHtml_(imageUrl) + '" alt="Rehana &amp; Mamadou" width="240" style="width:240px;max-width:100%;border-radius:10px;margin:0 0 24px;">' : '',
+    '<p style="margin:0 0 20px;font-family:Georgia,serif;font-size:24px;color:#7B6B65;">' + html(tpl.greeting) + '</p>',
+    tpl.paragraphs.map(s => '<p style="' + p + '">' + html(s) + '</p>').join(''),
+    '<p style="margin:26px 0;font-family:Georgia,serif;font-size:22px;color:#7B6B65;">' + html(tpl.closing) + '</p>',
+    '<p style="' + p + 'margin:0;">' + html(tpl.signoff) + '<br>' + html(tpl.signature) + '</p>',
+    '</div></div>',
+  ].join('');
+
+  return { subject: text(tpl.subject), body: body, htmlBody: htmlBody };
 }
 
 if (typeof module !== 'undefined') {
