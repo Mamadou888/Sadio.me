@@ -14,9 +14,9 @@ const INACTIVE_MESSAGE = 'This gift has already been given. Thank you! 🤍 / Ce
 
 const CUSTOM_FIELDS = [
   { key: 'guestname', type: 'text', label: 'Your name / Votre nom', optional: false, maxLength: 60 },
-  { key: 'guestnote', type: 'text', label: 'Please leave us a note / Laissez-nous un mot', optional: false, maxLength: 255 },
+  { key: 'guestnote', type: 'text', label: 'Would you like to leave us a note? / Un mot ?', optional: false, maxLength: 255 },
   {
-    key: 'display', type: 'dropdown', label: 'Show on the registry? / Afficher ?', optional: false,
+    key: 'display', type: 'dropdown', label: 'Show your name & note publicly? / Les afficher ?', optional: false,
     options: [
       ['namenote', 'Name & note / Nom et mot'],
       ['nameonly', 'Name only / Nom seulement'],

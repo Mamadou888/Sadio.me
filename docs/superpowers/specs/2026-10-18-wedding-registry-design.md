@@ -259,8 +259,8 @@ UI strings:
 | key | type | label (≤50 chars) | rules |
 |---|---|---|---|
 | `guestname` | text | Your name / Votre nom | **required**, max 60 |
-| `guestnote` | text | Please leave us a note / Laissez-nous un mot | **required**, max 255 |
-| `display` | dropdown | Show on the registry? / Afficher ? | required; options `namenote` "Name & note / Nom et mot", `nameonly` "Name only / Nom seulement", `private` "Keep private / Rester privé" |
+| `guestnote` | text | Would you like to leave us a note? / Un mot ? | **required**, max 255 |
+| `display` | dropdown | Show your name & note publicly? / Les afficher ? | required; options `namenote` "Name & note / Nom et mot", `nameonly` "Name only / Nom seulement", `private` "Keep private / Rester privé" |
 
 After payment Stripe redirects to `https://sadio.me/marrying_rehana/?gifted=<id>`, which shows the thank-you banner.
 Inactive-link message: "This gift has already been given. Thank you! 🤍 / Ce cadeau a déjà été offert. Merci ! 🤍"

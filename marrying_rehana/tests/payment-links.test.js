@@ -31,7 +31,7 @@ test('required name text field', () => {
 test('required note text field', () => {
   assert.equal(p.get('custom_fields[1][key]'), 'guestnote');
   assert.equal(p.get('custom_fields[1][type]'), 'text');
-  assert.equal(p.get('custom_fields[1][label][custom]'), 'Please leave us a note / Laissez-nous un mot');
+  assert.equal(p.get('custom_fields[1][label][custom]'), 'Would you like to leave us a note? / Un mot ?');
   assert.equal(p.get('custom_fields[1][optional]'), 'false');
   assert.equal(p.get('custom_fields[1][text][maximum_length]'), '255');
 });
@@ -40,7 +40,7 @@ test('required display-choice dropdown', () => {
   assert.equal(p.get('custom_fields[2][key]'), 'display');
   assert.equal(p.get('custom_fields[2][type]'), 'dropdown');
   assert.equal(p.get('custom_fields[2][optional]'), 'false');
-  assert.equal(p.get('custom_fields[2][label][custom]'), 'Show on the registry? / Afficher ?');
+  assert.equal(p.get('custom_fields[2][label][custom]'), 'Show your name & note publicly? / Les afficher ?');
   assert.deepEqual([0, 1, 2].map(i => p.get(`custom_fields[2][dropdown][options][${i}][value]`)), ['namenote', 'nameonly', 'private']);
   assert.deepEqual([0, 1, 2].map(i => p.get(`custom_fields[2][dropdown][options][${i}][label]`)),
     ['Name & note / Nom et mot', 'Name only / Nom seulement', 'Keep private / Rester privé']);
