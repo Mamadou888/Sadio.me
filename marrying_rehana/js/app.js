@@ -25,8 +25,10 @@ function renderTexts() {
   for (const el of document.querySelectorAll('[data-i18n]')) {
     el.textContent = t(state.lang, el.dataset.i18n);
   }
-  document.getElementById('blurb').innerHTML =
-    STRINGS[state.lang].blurb.map(p => `<p>${escapeHtml(p)}</p>`).join('');
+  const underline = escapeHtml(t(state.lang, 'blurbUnderline'));
+  document.getElementById('blurb').innerHTML = STRINGS[state.lang].blurb
+    .map(p => `<p>${escapeHtml(p).replace(underline, `<u>${underline}</u>`)}</p>`)
+    .join('');
   document.getElementById('euro-note').hidden = !t(state.lang, 'euroNote');
 }
 
