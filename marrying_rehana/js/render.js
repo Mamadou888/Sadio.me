@@ -23,11 +23,12 @@ function renderAction(gift, status, lang) {
 
 export function renderGiftCard(gift, status, lang, rate) {
   const title = escapeHtml(gift.title[lang]);
+  // A gifted card drops the price: the label, name and note say it all.
+  const price = status ? '' : `\n  <p class="gift-price">${escapeHtml(formatPrice(gift.priceUsd, lang, rate))}</p>`;
   return `<article class="gift-card${status ? ' is-gifted' : ''}" data-id="${escapeHtml(gift.id)}">
   <img src="${escapeHtml(gift.image)}" alt="${title}" loading="lazy">
   <h3 class="gift-title">${title}</h3>
-  <p class="gift-desc">${escapeHtml(gift.description[lang])}</p>
-  <p class="gift-price">${escapeHtml(formatPrice(gift.priceUsd, lang, rate))}</p>
+  <p class="gift-desc">${escapeHtml(gift.description[lang])}</p>${price}
   ${renderAction(gift, status, lang)}
 </article>`;
 }

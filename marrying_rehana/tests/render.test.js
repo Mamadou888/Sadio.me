@@ -34,6 +34,8 @@ test('gifted card shows name and note instead of the button', () => {
   assert.ok(card.includes('Have fun!'));
   assert.ok(!card.includes('Gift this experience'));
   assert.ok(!card.includes('buy.stripe.com'));
+  assert.ok(!card.includes('gift-price'));
+  assert.ok(!card.includes('$150'));
 });
 
 test('anonymous gifted card shows only Gifted', () => {
@@ -41,6 +43,7 @@ test('anonymous gifted card shows only Gifted', () => {
   assert.ok(card.includes('Gifted 🤍'));
   assert.ok(!card.includes('gifted-from'));
   assert.ok(!card.includes('<blockquote'));
+  assert.ok(!card.includes('gift-price'));
 });
 
 test('guest name and note are escaped', () => {
